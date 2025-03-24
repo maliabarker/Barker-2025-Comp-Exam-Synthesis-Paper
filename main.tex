@@ -422,13 +422,13 @@ When fitting a model, we determine the accuracy of the model fit to the actual d
     \text{BIC} = \chi^{2} + k\text{ln}N
 \end{equation}
 
-where $k$ is the number of fit parameters (two for a linear model, three for a quadratic model, and five for a precession model), $N$ is the number of data points or observations used to fit the model, and $\chi^{2}$ is the measurement of the goodness of fit, calculated by the sum of the residuals squared \citet{pearson1900criterion}:
+where $k$ is the number of fit parameters (two for a linear model, three for a quadratic model, and five for a precession model), $N$ is the number of data points or observations used to fit the model, and $\chi^{2}$ is the reduced chi-squared, which is the measurement of the goodness of fit, calculated by the sum of the residuals squared \citet{pearson1900criterion}:
 
 \begin{equation}
-    \chi^{2} = \sum\frac{(O_i - E_i)^2}{E_i}
+    \chi^{2} = \sum \left( \frac{O_i - E_i}{\sigma_i} \right)^2
 \end{equation}
 
-where $O_i$ is the observed value, or actual data point, and $E_i$ is the expected value calculated by the model.
+where $O_i$ is the actual observed value, $E_i$ is the expected value calculated by the model, and $\sigma_i$ is the photometric uncertainty.
 
 Larger values of $\chi^2$ 
 
