@@ -410,10 +410,21 @@ Emphasize the significance of addressing the identified research gaps to enhance
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\linewidth]{figs/adams_fig2.png}
-    \caption{$\Delta$ BIC values for 43 exoplanets. For all panels, a positive $\Delta$ BIC value favors a quadratic model over a linear model, suggesting a change in the orbital period. Blue bars indicate negative $\dot{P}$, meaning a decreasing orbital period, and red bars indicate a positive $\dot{P}$, indicating an increasing orbital period. Two grey lines are plotted with the dashed line at $\Delta$ BIC equal to 30 and the dotted line at $\Delta$ BIC equal to 10. The top plot shows the full range of $\Delta$ BIC values with WASP-12 b obviously surpassing all other planets. The middle panel shows the same information as above, but zoomed in to show the smaller $\Delta$ BIC values. The five systems with the highest values of $\Delta$ BIC have their The bottom panel shows the $\Delta$ BIC values rescaled }
+    \caption{$\Delta$ BIC values for 43 exoplanets. For all panels, a positive $\Delta$ BIC value favors a quadratic model over a linear model, suggesting a change in the orbital period. Blue bars indicate negative $\dot{P}$, meaning a decreasing orbital period, and red bars indicate a positive $\dot{P}$, indicating an increasing orbital period. Two grey lines are plotted with the dashed line at $\Delta$ BIC equal to 30 and the dotted line at $\Delta$ BIC equal to 10. The top plot shows the full range of $\Delta$ BIC values with WASP-12 b obviously surpassing all other planets. The middle panel shows the same information as above, zoomed in to show the smaller $\Delta$ BIC values. The five systems with the highest values of $\Delta$ BIC after WASP-12 b have their uncertainties on P??? plotted below the corresponding bar. The bottom panel shows the $\Delta$ BIC values after the data is rescaled.}
     \label{fig:enter-label}
 \end{figure}
 
+% Describing the rescaling process
+In reported literature, light curves often do not have realistic uncertainties on the mid-times. When we fit a model to transit data, we add weights on each point using the photometric uncertainty. If a specific data point has a very small value for their uncertainty, it can influence the model to fit that data point more than the others, essentially "weighing" down the resulting fit. Small error bars can result in a very impactful data point.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{}
+    \caption{Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+% Describing delta BIC
 For these planets, we are particularly interested in the decreasing orbital periods when searching for tidal decay. Increasing orbital periods, while interesting, do not indicate tidal decay and therefore are not of interest to us in this instance. 
 
 When fitting a model, we determine the accuracy of the model fit to the actual data using the Bayesian Information Criterion (BIC) \citet{schwarz1978estimating}
@@ -430,9 +441,14 @@ where $k$ is the number of fit parameters (two for a linear model, three for a q
 
 where $O_i$ is the actual observed value, $E_i$ is the expected value calculated by the model, and $\sigma_i$ is the photometric uncertainty.
 
-Larger values of $\chi^2$ 
+Smaller values of $\chi^2$ indicate smaller residuals, suggesting a better fit of the model to the data. However, models with more fit parameters can become biased, fitting the data too closely. For example, in \ref{fig:reduced-chi-squared}, we compare three models fitted to synthetically generated data: a linear model with two parameters, a quadratic model with three parameters, and a sinusoidal model with five parameters. As the number of fit parameters increases, the $\chi^2$ value also rises, suggesting that more complex models may better explain the data pattern. However, when we account for the penalization of additional parameters using the Bayesian Information Criterion (BIC), the value of BIC decreases, showing that more complex models do not necessarily provide a better description of the data. To minimize bias in more complex models, we use BIC, which adds a penalty based on the number of fit parameters $k$ to the reduced $\chi^2$ value.
 
-To minimize bias for more complex models, we use BIC, which penalizes additional model parameters by adding $k$ to the final BIC value.
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figs/reduced_chi_squared.png}
+    \caption{Comparison of model fit analysis to synthetic data. Residuals, represented by the dashed lines, show the differences between the actual data (black circles) and the model fits (solid lines). The reduced $\chi^2$ and BIC values for each model are displayed above the corresponding plot.}
+    \label{fig:reduced-chi-squared}
+\end{figure}
 
 
 
