@@ -410,19 +410,29 @@ Emphasize the significance of addressing the identified research gaps to enhance
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\linewidth]{figs/adams_fig2.png}
-    \caption{$\Delta$ BIC values for 43 exoplanets. For all panels, a positive $\Delta$ BIC value favors a quadratic model over a linear model, suggesting a change in the orbital period. Blue bars indicate negative $\dot{P}$, meaning a decreasing orbital period, and red bars indicate a positive $\dot{P}$, indicating an increasing orbital period. Two grey lines are plotted with the dashed line at $\Delta$ BIC equal to 30 and the dotted line at $\Delta$ BIC equal to 10. The top plot shows the full range of $\Delta$ BIC values with WASP-12 b obviously surpassing all other planets. The middle panel shows the same information as above, zoomed in to show the smaller $\Delta$ BIC values. The five systems with the highest values of $\Delta$ BIC after WASP-12 b have their uncertainties on P??? plotted below the corresponding bar. The bottom panel shows the $\Delta$ BIC values after the data is rescaled.}
-    \label{fig:enter-label}
+    \caption{$\Delta$BIC values for 43 exoplanets. In all panels, a positive $\Delta$BIC value favors a quadratic model over a linear model, indicating a change in the orbital period. Blue bars represent planets with a negative $\dot{P}$ (decreasing orbital period), while red bars indicate a positive $\dot{P}$ (increasing orbital period). Two reference lines are included: a dashed line at $\Delta$BIC = 30 and a dotted line at $\Delta$BIC = 10. 
+    The top panel displays the full range of $\Delta$BIC values, with WASP-12 b standing out as a clear outlier. The middle panel zooms in to highlight the smaller $\Delta$BIC values, showing the five systems with the next highest $\Delta$BIC values after WASP-12 b. For these systems, uncertainties on their measured orbital period changes (P???) are plotted below the corresponding bars. The bottom panel presents the $\Delta$BIC values after applying a rescaling procedure to the data. Details of this rescaling process are discussed below.}
+    \label{fig:adams-fig2}
 \end{figure}
 
 % Describing the rescaling process
-In reported literature, light curves often do not have realistic uncertainties on the mid-times. When we fit a model to transit data, we add weights on each point using the photometric uncertainty. If a specific data point has a very small value for their uncertainty, it can influence the model to fit that data point more than the others, essentially "weighing" down the resulting fit. Small error bars can result in a very impactful data point.
+In reported literature, uncertainties on mid-transit times in light curves can sometimes be unrealistically small. When fitting a model to transit data, each data point is weighted according to its photometric uncertainty, $\sigma$, with weights proportional to $\frac{1}{\sigma}$. If a data point has an exceptionally small uncertainty, it disproportionately influences the model fit, effectively "weighing down" the resulting model and skewing the fit toward that point.
 
-\begin{figure}
+To mitigate this issue, \citet{adams2024doomed} implemented a rescaling procedure. They first performed a linear fit using the original timing uncertainties and calculated the corresponding $\chi^2$ value. Then, they uniformly scaled all uncertainties by a factor such that the resulting $\chi^2$ value equaled 1. After rescaling, \citep{adams2024doomed} recomputed the $\Delta$BIC values for all systems, as shown in the bottom panel of \ref{fig:adams-fig2}. This adjustment significantly altered the $\Delta$BIC values, with only one system—excluding WASP-12 b—retaining a $\Delta$BIC greater than 10.
+
+TODO: Add a plot here to show how unrealistic transit midtime uncertainties can affect the resulting model fit.
+
+
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.5\linewidth]{}
+    \includegraphics[width=\linewidth]{figs/adams_fig4.jpg}
     \caption{Caption}
-    \label{fig:enter-label}
+    \label{fig:adams-fig4}
 \end{figure}
+
+In \ref{fig:adams-fig4}, the data points highlighted by red diamonds have very small error bars compared to the other observations in the data set. These data points greatly affect the value of $\Delta$ BIC, shifting it by 25\% or more when included. 
+
+TODO: finish writing the above
 
 % Describing delta BIC
 For these planets, we are particularly interested in the decreasing orbital periods when searching for tidal decay. Increasing orbital periods, while interesting, do not indicate tidal decay and therefore are not of interest to us in this instance. 
