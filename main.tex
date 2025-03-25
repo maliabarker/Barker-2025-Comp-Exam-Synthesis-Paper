@@ -274,6 +274,13 @@ Across all formation theories, it is possible that planets initially form beyond
 
 UHJs provide a unique window into the final stages of hot Jupiter orbital evolution. Due to their large masses and extreme proximity to their host stars, UHJs exert strong gravitational forces, inducing significant tidal bulges on their stars—features that, in some cases, can even be directly observed \citep{barros2022detection}. The tidal bulge and the exoplanet tend to move toward synchronization; however, if the planet orbits faster than the tidal bulge rotates—causing the bulge to lag behind—angular momentum is transferred from the planet’s orbit to the star \citep{ogilvie2014tidal}. This loss of angular momentum causes the planet's orbit to shrink and the planet gradually spirals into its host star, a process known as orbital decay due to tidal interactions, or tidal decay. If no other mechanism intervenes to stall this process, these planets are expected to eventually undergo mass loss and ultimately be destroyed by their stars. A more in-depth review of this process is presented in Section \ref{sec:tidaldissipation}.
 
+\textbf{TODO:} Should I add in information about merger outcomes using this paper: \citet{metzger2012optical}. This would cover stable/unstable mass loss, roche lobe overflow
+- fills roche lobe below the stellar surface -> direct impact merger event
+    - this has been potentially observed by \citep{de2023infrared}
+- fills roche lobe above the stellar surface -> 
+    - disrupted into an accretion disk around star called a tidal disruption merger event
+    - gradually transfers mass over a long time scale called stable mass transfer
+
 The theory of orbital evolution leading to planetary destruction is supported by observations showing that most UHJs are found around younger stars compared to the broader population of planet-hosting stars \citep{hamer2019hot}, suggesting that hot Jupiters do not "stick around" for long. However, only one confirmed hot Jupiter, WASP-12 b, has been observed undergoing tidal decay \citep{yee2019orbit}. This raises important questions: Are UHJs actively spiraling into their stars? If so, on what timescale does this occur? Or do other mechanisms stall or delay their destruction? Understanding the orbital evolution of UHJs is key to answering these questions.
 
 \begin{figure}[htbp]
@@ -344,21 +351,60 @@ In extreme mass ratio systems, the smaller body contributes very little spin ang
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\linewidth]{figs/ogilvie_fig2.png}
-    \caption{The vertical axis describes the tidal frequency in the fluid frame, which is the angular frequency measured in frame of reference rotating with the body ($\hat{\omega}$), divided by the body's spin frequency ($\Omega_s$). This tells us how the tidal forces compare to the body's own revolution about its axis. The horizontal axis is the orbital frequency ($\Omega_o$), which is the rate that body 1 rotates around body 2, divided by the spin frequency ($\Omega_s$), which is the rate that body 1 spins about its axis. This tells us how fast the body is orbiting compared to its spin. The body reaches a synchronous state at $\frac{\Omega_o}{\Omega_s} = 1$, which is indicated by the dashed vertical line. 
-    Each colored line represents a different set of quadrupolar components of the tidal potential, which are labeled above the line by $l, m, n$.
-    Each line has slope equal to $n$, which is the temporal harmonic index, or the time-dependent components of the quadrupolar components, and y-intercept $m$, which is the order of spherical harmonic, which determines the longitudinal structure of the tide. }
-    \label{fig:ogilvie-fig2}
+    \includegraphics[width=\linewidth]{figs/ogilvie_tbl1.png}
+    \caption{Table 1 from \citep{ogilvie2014tidal} shows the quadrupolar components of the tidal potential. }
+    \label{fig:ogilvie-tbl1}
 \end{figure}
-
-The tidal potential, which is the gravitational influence of one body on another, is commonly described by spherical harmonics. Spherical harmonics uses partial differential equations to expand the potential in terms of multipole moments. The most important of these are the monopole moment ($l = 0$) when the body can be treated as a point mass, and the quadrupole moment ($l=2$) when the body deviates from a perfect sphere due to tidal distortion. 
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.5\linewidth]{figs/ogilvie_fig10.png}
-    \caption{Caption}
+    \includegraphics[width=0.8\linewidth]{figs/ogilvie_fig2.png}
+    \caption{The vertical axis describes the tidal frequency in the fluid frame, which is the angular frequency measured in frame of reference rotating with the body ($\hat{\omega}$), divided by the body's spin frequency ($\Omega_s$). This tells us how the tidal forces compare to the body's own revolution about its axis. The horizontal axis is the orbital frequency ($\Omega_o$), which is the rate that body 1 rotates around body 2, divided by the spin frequency ($\Omega_s$), which is the rate that body 1 spins about its axis. This tells us how fast the body is orbiting compared to its spin. The body reaches a synchronous state at $\frac{\Omega_o}{\Omega_s} = 1$, which is indicated by the dashed vertical line. 
+    Each colored line represents a different set of quadrupolar components of the tidal potential found in Table \ref{fig:ogilvie-tbl1}, labeled by $l, m, n$. Each line has slope $n$, which is the temporal harmonic index, or the time-dependent components of the quadrupolar components, and y-intercept $-m$, which is the order of spherical harmonic, which determines the longitudinal structure of the tide.
+    Dotted lines indicate the frequency at which inertial waves can be excited inside the rotating body.}
+    \label{fig:ogilvie-fig2}
+\end{figure}
+
+The tidal potential, which describes the gravitational influence of one body on another, is commonly expressed using spherical harmonics. Spherical harmonics provide a mathematical framework to expand the tidal potential into multipole moments, solving partial differential equations to describe different spatial variations. The most significant moments are the monopole moment ($l = 0$), where the body is treated as a point mass, and the quadrupole moment ($l=2$), which accounts for the body's deviation from a perfect sphere due to tidal distortions.
+
+% EXPLAINING TABLE 1
+
+Table \ref{fig:ogilvie-tbl1} lists the quadrupolar components of different tidal contributions. All tides in the table have $l=2$, describing the behavior of a tidal bulge raised on the body.
+
+The order of the spherical harmonic, $m$, represents the longitudinal structure of the tidal bulge. When $m=0$, the tides are axisymmetric, meaning the bulge is uniformly distributed around the entire body. When $m=1$ or $m=2$, the tides are non-axisymmetric, meaning the bulge varies with longitude.
+
+The temporal harmonic index, $n$, represents the time-dependent components of the tidal potential. If $n=0$, the tide is static, leading to a constant deformation. If $n>0$, the tide oscillates periodically due to orbital motion.
+
+The tidal amplitude, $|A|$, describes the relative strength of each tidal component. 
+
+A static tide, corresponding to $n=0$ and $m=0$, represents a permanent, axisymmetric tidal bulge raised on the body. An asynchronous tide, corresponding to $l=m=n=2$, occurs when the body's spin is not synchronized with its orbit, leading to the misalignment between the tidal bulge and the orbital motion. An eccentricity tide arises from an elliptical orbit, with its amplitude $|A|$ proportional to the orbital eccentricity $e$, leading to periodic variations in tidal forces due to varying speeds as the body moves through its orbit. An obliquity tide is driven by a misalignment between the body's spin axis and its orbital plane, with its amplitude $|A|$ proportional to the obliquity $i$ (the measure of the tilt relative to the orbital plane), introducing additional tidal components that depend on the body's tilt.
+
+Figure \ref{fig:ogilvie-fig2} plots the seven sets of quadrupolar components from Table \ref{fig:ogilvie-tbl1}. 
+
+% INTERPRETING FIG \ref{fig:ogilvie-fig2}
+
+The Coriolis force (EXPLAIN) can give rise to inertial waves in a rotating body. If a full sphere is fully convective, such as a star, then inertial waves can propagate. Tidal response (explain) of inertial waves increase with the spin frequency of the rotating body, meaning bodies that spin faster have higher tidal responses and higher rates of tidal dissipation. Larger cores or greater density contrasts between layers lead to stronger tidal responses in inertial waves. (idk how this exactly ties into UHJS)
+
+Based on the formation theories, the inertial waves may differ greatly. If it is the in-situ formation, there is a theorized minimum 10 earth mass core, which is fairly large and therefore has higher tidal dissipation rates. 
+
+These are important because tidal dissipation rate depends heavily on the frequency of these waves. When tidal component frequency (y-axis) falls within the range of inertial waves (dotted horizontal lines), the mode can interact with fluid motions and enhance tidal dissipation. The presence of strong tidal interactions when internal waves are excited may explain the high tidal dissipation rates we see in UHJ systems.
+
+Dissipation rates within the planet can explain tidal circularization, while dissipation rates within the star can explain transfer of angular momentum and orbital decay.
+
+When the orbital and spin angular frequencies of a body are equal to one another, they reach a synchronous state in which the body is orbiting at the same rate that it is spinning on its axis. This state is shown by the dashed vertical line in Figure \ref{fig:ogilvie-fig2}. This can influence the long-term tidal evolution HOW??
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\linewidth]{figs/ogilvie_fig10.png}
+    \caption{The evolutionary paths of a planet interacting with its host star (assuming a circularized orbit with $e=0$). The vertical axis shows the stellar spin angular frequency (in units of the critical angular velocity, $\Omega_c$, which is associated with the critical angular momentum, $L_c$, which is the angular momentum needed to reach tidal equilibrium). The horizontal axis shows the stellar orbital angular velocity (also in units of critical angular velocity $\Omega_c$). The solid lines are contours of the total angular momentum $L$. The dashed line represents the stellar synchronized state, when the spin and orbital angular frequencies are equal. Black points are moments of tidal equilibrium, when $L \geq L_c$. If tidal equilibrium is not reached, when $L < L_c$, then the planet heads towards destruction.}
     \label{fig:ogilvie-fig10}
 \end{figure}
+
+If the total angular momentum, $L$, is less than the critical value $L_c$, then the orbital angular momentum of the planet is turned into stellar spin angular momentum, leading to a decaying orbit and stellar spin-up. 
+
+When looking at binary star recircularization, we find a tidal dissipation rate $Q^{'}_{*}$ of $10^6$. However, if we assume this rate for UHJ systems, we get unrealisticly short orbital decay timescales. As seen in JACKSON PAPER, ADAMS PAPER (maybe use adams table 8), if we assume a constant value of $Q^{'}_{*}$, we get the following theoretical dP/dE, which differs from the observed dP/dE. This shows that we cannot assume this value, and that it is instead dependent on things such as stellar structure blah blah. 
+
+The galactic engulfment rate scales with the tidal dissipation rate. So, if we can constrain the tidal dissipation rate, then we can constrain the galactic engulfment rate and have a rough estimate of how many merger events occur in our galaxy each year. BUT WHAT IF THE TIDAL DISSIPATION RATE IS NOT THE SAME FOR EACH SYSTEM??? 
 
 \begin{figure}[htbp]
     \centering
@@ -368,7 +414,7 @@ The tidal potential, which is the gravitational influence of one body on another
 \end{figure}
 
 
-
+\clearpage
 
 \subsection{Detection and Analysis of Transits and Occultations}
 
