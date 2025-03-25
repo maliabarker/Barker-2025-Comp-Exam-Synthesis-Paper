@@ -278,8 +278,8 @@ The theory of orbital evolution leading to planetary destruction is supported by
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.6\linewidth]{figs/winn_fig1.png}
-    \caption{Pulled from \citet{winn2010transits}, illustration of an exoplanet transit and occultation around its host star from our point of view. During a transit, the planet passes in front of its host star and casts a shadow, blocking out light from the star which appears as a characteristic dip in the flux over time. During an occultation, the planet passes behind its star and the small amount of light reflected off the planet is blocked by the star, which appears as a slightly smaller dip in flux over time.}
+    \includegraphics[width=0.7\linewidth]{figs/winn_fig1.png}
+    \caption{Figure 1 from \citet{winn2010transits} illustrates an exoplanet transit and occultation edge-on. During a transit, the planet passes in front of its host star, blocking starlight and causing a characteristic dip in flux over time. During an occultation, the planet moves behind the star, obscuring its reflected light and producing a smaller flux dip.}
     \label{fig:winnfig1}
 \end{figure}
 
@@ -289,43 +289,27 @@ UHJ's large radii and short orbital periods also provide the opportunity to obse
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.5\linewidth]{figs/winn_fig2.png}
-    \caption{Pulled from \citet{winn2010transits}, illustration of the four key contact points during an exoplanet transit. First contact, $t_I$, occurs when the stellar and planetary disks are tangent to each other. This constitutes the start of the transit. Second contact, $t_{II}$, occurs when the planetary disk has fully moved into view of the stellar disk, and the outer limb of the planetary disk is tangent to the stellar disk. The time between first and second contact, $t_{II} - t_I$ is known as the ingress duration $\tau_\text{ing}$. Third contact, $t_{III}$, occurs when the planetary disk has moved across the stellar disk, and the disks are once again tangent to each other. Fourth contact, $t_{IV}$, occurs when the planetary disk has moved out of the stellar disk, and the planetary and stellar disk are tangent to each other. This constitutes as the end of the transit. The time between third and fourth contact, $t_{IV} - t_{III}$, is known as the egress duration $\tau_\text{egr}$. The total duration $T_\text{tot}$ is defined as the time between contact one and four, $t_{IV} - t_{I}$, when the planetary and stellar disks are first and last tangent to one another. The transit duration $T_\text{full}$ is defined as the time between contact two and three, $t_{III} - t_{II}$, when the planetary disk is completely within the stellar disk.}
+    \includegraphics[width=0.6\linewidth]{figs/winn_fig2.png}
+    \caption{Figure 2 from \citet{winn2010transits} illustrates the four key contact points during an exoplanet transit. First contact ($t_I$) marks the start of the transit when the planetary and stellar disks first touch. Second contact ($t_{II}$) occurs when the planet is fully within the stellar disk, defining the ingress duration ($\tau_\text{ing} = t_{II} - t_I$). Third contact ($t_{III}$) happens when the planet has moved across the stellar disk and begins to exit, and fourth contact ($t_{IV}$) marks the end when the disks last touch, defining the egress duration ($\tau_\text{egr} = t_{IV} - t_{III}$). The total duration ($T_\text{tot} = t_{IV} - t_{I}$) spans the entire transit, while the full transit duration ($T_\text{full} = t_{III} - t_{II}$) covers the time the planet is fully within the stellar disk.}
     \label{fig:winnfig2}
 \end{figure}
 
 UHJs have easily collectible light curves, but how do we process the data from these light curves? Let's call the time that the planet is in the very middle of its transit the midtransit time, which is calculated as half of the time it takes from contact two to contact three, $\frac{T_{\text{tot}}}{2}$, shown in Figure \ref{fig:winnfig2}. The time it takes from one consecutive midtransit time to the next is the amount of time it takes for the planet to complete one orbit around its star, which we call the orbital period. As we collect light curves, and therefore, midtransit times, of UHJ transits, we can observe the behavior of the orbital period over time. If the orbital period is consistent, then we may conclude that the UHJ's orbit is stable and unchanging. However, if we observe a change or even a decrease in the orbital period, we may conclude that the orbit is decaying, possibly due to tidal interactions with its host star, that will lead to its eventual inspiral. 
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=\linewidth]{figs/precession.jpg}
-    \caption{Pulled from \citet{vervoort2022system}, an illustration of apsidal prevession }
-    \label{fig:enter-label}
+    \includegraphics[width=0.8\linewidth]{figs/precession.jpg}
+    \caption{Adapted from \citet{vervoort2022system}, this illustration depicts apsidal precession. The left panel shows an exoplanet initially orbiting within a fixed reference plane. Over time (right panel), the planet’s orbital ellipse precesses, gradually rotating within its plane. When observed edge-on, this precession causes variations in transit mid-times, making it appear as though the orbital period is changing. Without careful analysis, such shifts could be misinterpreted as evidence of tidal decay.}
+    \label{fig:precession}
 \end{figure}
 
-Changes in the orbital period may not always indicate tidal decay. Orbital period may also change due to apsidal precession, which occurs when a planet's orbit rotates within its orbital plane, changing the argument of pericenter over time. This evolution can cause the time between transits to vary sinusoidally. However, precession also shifts the timing of occultations by an amount of time equivalent to but opposite in sign from the shift in transit timing. In contrast, if a planet's transit timing changes due to orbital decay, then the times between occultations decrease along with the times between transits.
+Changes in the orbital period may not always indicate tidal decay. The orbital period may also change due to apsidal precession, which occurs when a planet's orbit rotates within its orbital plane, illustrated in Figure \ref{fig:precession}. This evolution can cause the time between transits to vary sinusoidally. However, precession also shifts the timing of occultations by an amount of time equivalent to but opposite in sign from the shift in transit timing. In contrast, if a planet's transit timing changes due to orbital decay, then the times between occultations decrease along with the times between transits.
 
-While it may seem fairly simple to find changes in the orbital periods 
-
-
-% - looking for key characteristics of orbital evolution with transit light curves to find out
-%     - how did hot jupiters get to the current orbits
-%     - how do hot jupiters interact with their stars over time/how do their orbits change
-%     - do hot jupiters eventually destruct/why are there such few around older stars/what is happening to them???
+Due to their large radii and short orbital periods, UHJs are prime targets for transit and occultation observations, enabling astronomers to track small orbital timing variations. These variations reveal key orbital properties and the planet’s interaction with its host star over time. While only one exoplanet is confirmed to undergo tidal decay, ongoing observations—by both professional and amateur astronomers—are expanding databases. As observations grow, orbital changes become clearer, improving our understanding of extrasolar systems. Ultimately, these efforts will help answer how UHJs formed and what their eventual fates are.
 
 \clearpage
 
-Among the most intriguing are Ultra-Hot Jupiters (UHJs)—gas giants similar in size and composition to Jupiter, yet with an unexpected twist. Unlike any planet in our Solar System, UHJs orbit their stars at extreme proximity, completing an entire orbit in less than three days. These tight orbits give rise to intense gravitational interactions between the planet and its star, causing the planet to spiral gradually into its star until it reaches the point of no return and is disrupted. 
 
-UHJs are particularly interesting to study because their extreme orbits make them easier to observe. Due to their large size and close proximity to their stars, many of these planets regularly pass in front of their host stars, casting an observable shadow in an event known as a transit. By precisely measuring the time between transits, we can track small changes in the orbits that may arise due to a decreasing orbital period.
-The search for such doomed worlds is a collaborative effort across multiple scientific disciplines. Theorists investigate the stellar physics and orbital dynamics driving planetary in-spiral, while observers track shrinking orbital periods using both ground- and space-based telescopes—including some on Boise State’s campus. These changes in orbital decay are subtle, on the order of milliseconds per Earth year, making unguided searches inefficient.
-
-An exoplanet transits its star when it passes between our observing point and the host star, casting a shadow onto the host star. To observe a transit, we collect light coming from the host star over time and compile it into a graph called a light curve. During an exoplanet transit, we can see a dip in the light coming from the star. During an occultation, which is when an exoplanet passes behind its host star, we can see a similar but much smaller dip in the amount of light observed on the light curve. These data allow us to estimate duration and mid-times for transits and occultations. We can additionally note the time between transits or occultations by comparing the mid-times. Here, we focus on transits to explain how \texttt{susie} works, but the final package will allow inclusion of occultation data as well. Each exoplanet transit is denoted by an epoch. The mid-transit time from one epoch to the next equates to the time of one full orbit of the exoplanet around its host star, the orbital period.
-
-Exoplanets such as short-period massive Hot Jupiters can experience tidal forces from their stars. If the exoplanet is orbiting faster than its host star is rotating, the tidal interactions will transfer angular momentum from the exoplanet's orbit to the star. As angular momentum is transferred from the orbit, the planet's orbital period and distance decrease, a process called tidal decay. (Times between occultations decrease in the same way.) The rate of tidal decay depends, among other things, on the rate of energy dissipation within the host star, often quantified through the stellar dissipation parameter, $Q_\star^\prime$.
-
-\subsubsection{Objectives of the Synthesis}
-Summarize the goals of the paper: to synthesize current research on tidal decay in UHJ systems, identify research gaps, and propose future research directions.
 
 
 \subsection{Mechanisms of Tidal Dissipation in Stars and Giant Planets}\label{sec:tidaldissipation}
@@ -333,8 +317,53 @@ Summarize the goals of the paper: to synthesize current research on tidal decay 
 \subsubsection{Overview of Tidal Dissipation}
 Summarize the mechanisms of tidal dissipation in stars and giant planets, as discussed by Ogilvie (2014).
 
+
+
 \subsubsection{Application to UHJ Systems}
 Discuss how these mechanisms apply to UHJs, considering their close proximity to host stars and the resulting strong tidal forces.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{figs/ogilvie_fig1.png}
+    \caption{Figure 1 from Ogilvie illustrates the geometry of tidal interactions between two bodies. Shown here are the spherical polar coordinates ($\theta$, r, and $\phi$ in green) of the orbital planes, centered on body 1 with mean radius $R_1$ and mass $M_1$, and body 2 with mass $M_2$, with orbital separation $d$. $\Omega_s$ is the spin angular velocity vector and $\Omega_o$ is the orbital angular velocity vector, shown in red. The ellipsoidal bulge raised on body 1 by body 2 is shown by the solid black line, while the unaltered, spherical shape of body 1 is shown by the dotted black line.}
+    \label{fig:ogilvie-fig1}
+\end{figure}
+
+In physics, many systems can be characterized by their monopole and quadrupole moments. The monopole moment is the simplest case, where a body is treated as a point mass with all its mass concentrated at a single point. The quadrupole moment accounts for non-uniform mass distributions, describing bodies that deviate from a perfect sphere, such as UHJs with tidal bulges.
+
+Tidal interactions typically involve the monopole moment of one body and the quadrupole moment of the other \citep{ogilvie2014tidal}. As illustrated in Figure \ref{fig:ogilvie-fig1}, we can model the interaction between a UHJ and its host star by treating the star as a monopole (a point mass) and the planet as a quadrupole, since the star’s gravity raises a tidal bulge on the planet. While simplified in the figure, this bulge is not perfectly aligned with the axis connecting the two bodies; instead, it is slightly offset due to internal friction and orbital motion. This misalignment induces tidal forces that transfer angular momentum and dissipate energy. Over time, these forces drive the system toward tidal locking, where the planet’s rotation period matches its orbital period, causing the same hemisphere to always face its host star.
+
+Over time, tidal forces drive a system toward tidal equilibrium, in which both bodies achieve aligned, synchronous rotation and a circular orbit. However, in systems with large mass differences, such as UHJ systems, this equilibrium may not be possible because the total angular momentum is insufficient.
+
+The total angular momentum of a system is the sum of orbital angular momentum ($L_o$)–the angular momentum associated with the planet's orbit around its host star and the spin angular momentum ($L_s$)–the angular momentum from the planet’s rotation about its own axis.
+For tidal equilibrium to be reached, the total angular momentum ($L = L_o + L_s$) must exceed a critical threshold ($L_c$). If $L < L_c$, the system continues evolving instead of settling into a stable state.
+
+In extreme mass ratio systems, the smaller body contributes very little spin angular momentum because its moment of inertia is small. As a result, the total angular momentum is much lower than in systems with two similar-mass bodies (e.g., binary stars), where both contribute significant spin angular momentum. If the system cannot reach equilibrium, tidal interactions continue to transfer angular momentum between the planet’s orbit and the star’s spin. Over time, this exchange causes the planet’s orbit to decay, ultimately leading to orbital inspiral and destruction as the planet is pulled into its host star.
+
+% In circular orbits, rotation speed matches orbit and the spin axis aligns to straight-up direction relative to the orbital plane. However, in eccentric orbits, the tidal forces are strongest at the pericenter, so the spin usually synchs at the fastest part of the orbit, entering a state of psuedo-synchronization. If we consider the warm to hot jupiter theory represented in \citep{fortney2021hotjupiters} and \citep{dawson2018origins}, if we start with an eccentric orbit, then the planet will enter pseudo-synchronization 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figs/ogilvie_fig2.png}
+    \caption{Caption}
+    \label{fig:ogilvie-fig2}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figs/ogilvie_fig10.png}
+    \caption{Caption}
+    \label{fig:ogilvie-fig10}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{figs/adams_fig11.png}
+    \caption{Caption}
+    \label{fig:adams-fig11}
+\end{figure}
+
+
 
 
 \subsection{Detection and Analysis of Transits and Occultations}
@@ -346,6 +375,9 @@ Review the methods for detecting transits and occultations, as outlined by Winn 
 Explain how precise measurements of transit timings can indicate changes in orbital periods, signaling potential tidal decay.
 
 
+
+
+
 \subsection{Analytical Approaches to Transit Light-Curve Observables}
 
 \subsubsection{Analytical Models}
@@ -355,81 +387,10 @@ Discuss the analytical approximations for transit light-curve observables presen
 Examine how these models assist in accurately determining transit times and detecting minute changes indicative of orbital decay.
 
 
+
+
+
 \subsection{Metrics for Optimizing Searches for Tidally Decaying Exoplanets}
-
-\subsubsection{Proposed Metrics}
-Summarize the metrics introduced by Jackson et al. (2023) for optimizing the search for tidally decaying exoplanets.
-
-\subsubsection{Application to UHJ Systems}
-Evaluate the effectiveness of these metrics when applied to UHJs, considering their unique characteristics.
-
-
-\subsection{Observational Evidence and Challenges}
-
-\subsubsection{Case Study: WASP-12b}
-Discuss the observed orbital decay in WASP-12b, including the measured decrease in transit intervals and its implications. 
-
-\subsubsection{Long-Term Survey Findings}
-Review the findings of Adams et al. (2024), which reported no new evidence for orbital decay in a long-term survey of 43 UHJs.
-
-\subsubsection{Discrepancies and Challenges}
-Analyze the discrepancies between different observational studies and the challenges in detecting small changes in orbital periods.
-
-
-\subsection{Gaps in Current Research}
-
-\subsubsection{Limited Observational Data}
-Highlight the need for more extended and precise observational campaigns to detect subtle orbital decay signals.
-
-\subsubsection{Theoretical Model Limitations}
-Discuss the limitations of current tidal dissipation models in explaining the varying rates of orbital decay observed.
-
-\subsubsection{Influence of Stellar Properties}
-Identify the need for more research on how different stellar properties (e.g., age, rotation rate, magnetic activity) affect tidal dissipation and orbital decay.
-
-
-\subsection{Proposed Future Research Directions}
-
-\subsubsection{High-Precision Transit Timing}
-Advocate for the development of more precise transit timing methods to detect minute changes in orbital periods.
-
-\subsubsection{Comprehensive Surveys}
-Propose conducting comprehensive surveys of UHJs with consistent observation protocols to gather uniform data on orbital periods.
-
-\subsubsection{Advanced Modeling}
-Encourage the development of more sophisticated models that incorporate a wider range of stellar and planetary properties to predict tidal dissipation and orbital decay more accurately.
-
-- Interpolable grid of values of Q* based on stellar age and mass, so we can redo analytical approximations. For example, figure 1 of Jackson. 
-
-
-\subsection{Conclusion}
-
-\subsubsection{Summary of Findings}
-Recap the key insights gained from synthesizing the five articles on tidal decay in UHJ systems.
-
-\subsubsection{Importance of Continued Research}
-Emphasize the significance of addressing the identified research gaps to enhance our understanding of tidal interactions and the evolution of UHJ systems.
-
-\clearpage
-
-\textbf{ADAMS PAPER}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.9\linewidth]{figs/adams_fig2.jpg}
-    \caption{$\Delta$BIC values for 43 exoplanets. In all panels, a positive $\Delta$BIC value favors a quadratic model over a linear model, indicating a change in the orbital period. Blue bars represent planets with a negative $\dot{P}$ (decreasing orbital period), while red bars indicate a positive $\dot{P}$ (increasing orbital period). Two reference lines are included: a dashed line at $\Delta$BIC = 30 and a dotted line at $\Delta$BIC = 10. 
-    The top panel displays the full range of $\Delta$BIC values, with WASP-12 b standing out as a clear outlier. The middle panel zooms in to highlight the smaller $\Delta$BIC values, showing the five systems with the next highest $\Delta$BIC values after WASP-12 b. For these systems, uncertainties on their measured orbital period changes (P???) are plotted below the corresponding bars. The bottom panel presents the $\Delta$BIC values after applying a rescaling procedure to the data. Details of this rescaling process are discussed below.}
-    \label{fig:adams-fig2}
-\end{figure}
-
-% Describing the rescaling process
-In reported literature, uncertainties on mid-transit times in light curves can sometimes be unrealistically small. When fitting a model to transit data, each data point is weighted according to its photometric uncertainty, $\sigma$, with weights proportional to $\frac{1}{\sigma}$. If a data point has an exceptionally small uncertainty, it disproportionately influences the model fit, effectively "weighing down" the resulting model and skewing the fit toward that point.
-
-To mitigate this issue, \citet{adams2024doomed} implemented a rescaling procedure. They first performed a linear fit using the original timing uncertainties and calculated the corresponding $\chi^2$ value. Then, they uniformly scaled all uncertainties by a factor such that the resulting $\chi^2$ value equaled 1. After rescaling, \citep{adams2024doomed} recomputed the $\Delta$BIC values for all systems, as shown in the bottom panel of \ref{fig:adams-fig2}. This adjustment significantly altered the $\Delta$BIC values, with only one system—excluding WASP-12 b—retaining a $\Delta$BIC greater than 10.
-
-This change in $\Delta$BIC highlights the importance of data processing and accuracy. 
-
-% TODO: Add a plot here to show how unrealistic transit midtime uncertainties can affect the resulting model fit.
 
 % Describing delta BIC
 For these planets, we are particularly interested in the decreasing orbital periods when searching for tidal decay. Increasing orbital periods, while interesting, do not indicate tidal decay and therefore are not of interest to us in this instance. 
@@ -464,53 +425,6 @@ In this case, positive values of $\Delta$ BIC, calculated with the equation:
 \end{equation}
 
 indicate a statistical preference for a quadratic model over a linear model.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\linewidth]{figs/adams_fig4.jpg}
-    \caption{Caption}
-    \label{fig:adams-fig4}
-\end{figure}
-
-In \ref{fig:adams-fig4}, the data points highlighted by red diamonds have very small error bars compared to the other observations in the data set. These data points greatly affect the value of $\Delta$ BIC, shifting it by 25\% or more when included.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\linewidth]{figs/adams_fig3.png}
-    \caption{Caption}
-    \label{fig:enter-label}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\linewidth]{figs/adams_fig11.png}
-    \caption{Caption}
-    \label{fig:enter-label}
-\end{figure}
-
-\clearpage
-
-
-\textbf{CARTER PAPER}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.5\linewidth]{figs/carter_fig1.png}
-    \caption{Caption}
-    \label{fig:enter-label}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.5\linewidth]{figs/carter_fig2.png}
-    \caption{Caption}
-    \label{fig:enter-label}
-\end{figure}
-
-\clearpage
-
-
-\textbf{JACKSON PAPER}
 
 \begin{figure}[htbp]
     \centering
@@ -581,28 +495,126 @@ versus the time since the last recorded observation as of April 5th, 2023. The l
     \label{fig:jackson_fig3}
 \end{figure}
 
+% \subsubsection{Proposed Metrics}
+% Summarize the metrics introduced by Jackson et al. (2023) for optimizing the search for tidally decaying exoplanets.
+
+% \subsubsection{Application to UHJ Systems}
+% Evaluate the effectiveness of these metrics when applied to UHJs, considering their unique characteristics.
+
+
+
+
+
+\subsection{Observational Evidence and Challenges}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figs/adams_fig2.jpg}
+    \caption{$\Delta$BIC values for 43 exoplanets. In all panels, a positive $\Delta$BIC value favors a quadratic model over a linear model, indicating a change in the orbital period. Blue bars represent planets with a negative $\dot{P}$ (decreasing orbital period), while red bars indicate a positive $\dot{P}$ (increasing orbital period). Two reference lines are included: a dashed line at $\Delta$BIC = 30 and a dotted line at $\Delta$BIC = 10. 
+    The top panel displays the full range of $\Delta$BIC values, with WASP-12 b standing out as a clear outlier. The middle panel zooms in to highlight the smaller $\Delta$BIC values, showing the five systems with the next highest $\Delta$BIC values after WASP-12 b. For these systems, uncertainties on their measured orbital period changes (P???) are plotted below the corresponding bars. The bottom panel presents the $\Delta$BIC values after applying a rescaling procedure to the data. Details of this rescaling process are discussed below.}
+    \label{fig:adams-fig2}
+\end{figure}
+
+% Describing the rescaling process
+In reported literature, uncertainties on mid-transit times in light curves can sometimes be unrealistically small. When fitting a model to transit data, each data point is weighted according to its photometric uncertainty, $\sigma$, with weights proportional to $\frac{1}{\sigma}$. If a data point has an exceptionally small uncertainty, it disproportionately influences the model fit, effectively "weighing down" the resulting model and skewing the fit toward that point.
+
+To mitigate this issue, \citet{adams2024doomed} implemented a rescaling procedure. They first performed a linear fit using the original timing uncertainties and calculated the corresponding $\chi^2$ value. Then, they uniformly scaled all uncertainties by a factor such that the resulting $\chi^2$ value equaled 1. After rescaling, \citep{adams2024doomed} recomputed the $\Delta$BIC values for all systems, as shown in the bottom panel of \ref{fig:adams-fig2}. This adjustment significantly altered the $\Delta$BIC values, with only one system—excluding WASP-12 b—retaining a $\Delta$BIC greater than 10.
+
+This change in $\Delta$BIC highlights the importance of data processing and accuracy. 
+
+% TODO: Add a plot here to show how unrealistic transit midtime uncertainties can affect the resulting model fit.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{figs/adams_fig4.jpg}
+    \caption{Caption}
+    \label{fig:adams-fig4}
+\end{figure}
+
+In \ref{fig:adams-fig4}, the data points highlighted by red diamonds have very small error bars compared to the other observations in the data set. These data points greatly affect the value of $\Delta$ BIC, shifting it by 25\% or more when included.
+
+% \subsubsection{Case Study: WASP-12b}
+% Discuss the observed orbital decay in WASP-12b, including the measured decrease in transit intervals and its implications. 
+
+% \subsubsection{Long-Term Survey Findings}
+% Review the findings of Adams et al. (2024), which reported no new evidence for orbital decay in a long-term survey of 43 UHJs.
+
+% \subsubsection{Discrepancies and Challenges}
+% Analyze the discrepancies between different observational studies and the challenges in detecting small changes in orbital periods.
+
+
+
+
+
+\subsection{Gaps in Current Research}
+
+\subsubsection{Limited Observational Data}
+Highlight the need for more extended and precise observational campaigns to detect subtle orbital decay signals.
+
+\subsubsection{Theoretical Model Limitations}
+Discuss the limitations of current tidal dissipation models in explaining the varying rates of orbital decay observed.
+
+\subsubsection{Influence of Stellar Properties}
+Identify the need for more research on how different stellar properties (e.g., age, rotation rate, magnetic activity) affect tidal dissipation and orbital decay.
+
+
+
+
+
+\subsection{Proposed Future Research Directions}
+
+\subsubsection{High-Precision Transit Timing}
+Advocate for the development of more precise transit timing methods to detect minute changes in orbital periods.
+
+\subsubsection{Comprehensive Surveys}
+Propose conducting comprehensive surveys of UHJs with consistent observation protocols to gather uniform data on orbital periods.
+
+\subsubsection{Advanced Modeling}
+Encourage the development of more sophisticated models that incorporate a wider range of stellar and planetary properties to predict tidal dissipation and orbital decay more accurately.
+
+- Interpolable grid of values of Q* based on stellar age and mass, so we can redo analytical approximations. For example, figure 1 of Jackson. 
+
+
+
+
+
+\subsection{Conclusion}
+
+\subsubsection{Summary of Findings}
+Recap the key insights gained from synthesizing the five articles on tidal decay in UHJ systems.
+
+\subsubsection{Importance of Continued Research}
+Emphasize the significance of addressing the identified research gaps to enhance our understanding of tidal interactions and the evolution of UHJ systems.
+
 \clearpage
 
 
-\textbf{OGILVIE PAPER}
+
+
+\textbf{ADAMS PAPER}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.5\linewidth]{figs/ogilvie_fig1.png}
+    \includegraphics[width=\linewidth]{figs/adams_fig3.png}
+    \caption{Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+\clearpage
+
+
+\textbf{CARTER PAPER}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figs/carter_fig1.png}
     \caption{Caption}
     \label{fig:enter-label}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.5\linewidth]{figs/ogilvie_fig2.png}
-    \caption{Caption}
-    \label{fig:enter-label}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.5\linewidth]{figs/ogilvie_fig10.png}
+    \includegraphics[width=0.5\linewidth]{figs/carter_fig2.png}
     \caption{Caption}
     \label{fig:enter-label}
 \end{figure}
@@ -611,20 +623,6 @@ versus the time since the last recorded observation as of April 5th, 2023. The l
 
 
 \textbf{WINN PAPER}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.5\linewidth]{figs/winn_fig1.png}
-    \caption{Caption}
-    \label{fig:enter-label}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.5\linewidth]{figs/winn_fig2.png}
-    \caption{Caption}
-    \label{fig:enter-label}
-\end{figure}
 
 \begin{figure}
     \centering
@@ -643,13 +641,6 @@ versus the time since the last recorded observation as of April 5th, 2023. The l
 \begin{figure}
     \centering
     \includegraphics[width=0.5\linewidth]{figs/winn_fig6.png}
-    \caption{Caption}
-    \label{fig:enter-label}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{figs/winn_fig7.png}
     \caption{Caption}
     \label{fig:enter-label}
 \end{figure}
