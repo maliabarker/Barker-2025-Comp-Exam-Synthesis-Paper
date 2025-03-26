@@ -622,28 +622,29 @@ Evaluate the effectiveness of these metrics when applied to UHJs, considering th
 
 \subsection{Observational Evidence and Challenges}
 
-\subsubsection{Photometric Techniques}
-Review the methods for detecting transits and occultations, as outlined by Winn (2010).
+When a planet transits its star, there is a photometric signal and a spectroscopic signal. While both can confirm the transit of an exoplanet, each method results in unique datasets and planetary parameters. Below is an overview of both techniques, the parameters we can obtain from observations, and any caveats to these methods.
 
+\subsubsection{Photometric Techniques}
 Explain how precise measurements of transit timings can indicate changes in orbital periods, signaling potential tidal decay.
 
 - Flux collection: 
     - light curves (orbital periods)
     - planet needs to transit
-- Spectroscopy collection:
-    - rossiter-mclaughlin effect 
-    - planet doesn't need to transit BUT transit spectroscopy is super valuable
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\linewidth]{figs/winn_fig5.png}
-    \caption{Figure 5 from \citep{winn2010transits} illustrates the Rossiter-McLaughlin effect, which uses spectroscopy, or the collected of light wavelengths, to detect an exoplanet transit.}
-    \label{fig:winn-fig5}
-\end{figure}
 
-The Rossiter–McLaughlin effect, derived from papers by \citep{rossiter1924detection} and \citep{mclaughlin1924some}, is based on the doppler effect, which is the shift in frequency of a wave as an object moves towards or away from an observer. For example, as an emergency vehicle approaches an observer, they may hear the pitch of the sirens increase, then hear a decrease in pitch as it retreats. This occurs because as the vehicle quickly approaches, the sound waves in front of it are compressed, resulting in a higher frequency and therefore higher pitch. As the vehicle retreats, the sound waves are stretched, resulting in a lower frequency and, therefore lower pitch. 
 
-The same is true for wavelengths of light. If a light source is moving towards an observer, the wavelengths of light are compressed and shifted towards the blue end of the electromagnetic spectrum (this is called a blueshift) and when the light source moves away from the observer, the wavelengths are stretched and shifted towards the red end of the spectrum (this is called a redshift). 
+\subsubsection{Spectroscopic Techniques}
+
+- Describe what spectroscopy is and what spectroscopic techniques are. 
+
+- just regular spectroscopy:
+    - can find "Changes in the stellar absorption lines can be produced by absorption features in the planetary atmosphere" (learn more about the atmosphere), (gaudi and winn)
+
+- rossiter-mclaughlin effect 
+    - can find the projected rotation speed of the stellar surface
+    - can find $\lambda$, the angle between sky projections of the stellar spin axis and the orbit normal (provides info about planetary spin-orbit alignment, which can then give us info about the synchronization due to tidal forces mentioned by Ogilvie, or even "possible means of discriminating among migration theories" (gaudi and winn)) (QUESTION: is this the same as the lambda in winn 2010)
+
+- planet doesn't need to transit BUT transit spectroscopy is super valuable
 
 \begin{figure}
     \centering
@@ -652,7 +653,25 @@ The same is true for wavelengths of light. If a light source is moving towards a
     \label{fig:enter-label}
 \end{figure}
 
-When an object as large as a star rotates, the part of the star moving towards the observer is blueshifted, and the part of the star moving away from the observer is redshifted, as seen in Figure \ref{fig:}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\linewidth]{figs/winn_fig5.png}
+    \caption{Figure 5 from \citep{winn2010transits} illustrates the Rossiter-McLaughlin effect, which uses spectroscopy, or the collected of light wavelengths, to detect an exoplanet transit.}
+    \label{fig:winn-fig5}
+\end{figure}
+
+The Rossiter–McLaughlin effect, derived from papers on eclipsing binary stars by \citep{rossiter1924detection} and \citep{mclaughlin1924some}, and first observed in exoplanets by \citep{queloz2000detection} and \citep{bundy2000search} is based on the Doppler effect, which is the shift in frequency of a wave as an object moves towards or away from an observer. For example, as an emergency vehicle approaches an observer, they may hear the pitch of the sirens increase, then hear a decrease in pitch as it retreats. This occurs because as the vehicle quickly approaches, the sound waves in front of it are compressed, resulting in a higher frequency and, therefore, a higher pitch. As the vehicle retreats, the sound waves are stretched, resulting in a lower frequency and, therefore, a lower pitch. 
+
+The same is true for wavelengths of light. If a light source is moving towards an observer, the wavelengths of light are compressed and shifted towards the blue end of the electromagnetic spectrum (this is called a blueshift) and when the light source moves away from the observer, the wavelengths are stretched and shifted towards the red end of the spectrum (this is called a redshift). 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{figs/triaud_fig1.png}
+    \caption{Figure 1 from \citep{triaud2017rossiter} illustrates the Rossiter-McLaughlin effect for the hot Jupiter HD 189733A b. CONTINUE EXPLAINING STUFF}
+    \label{fig:triaud-fig1}
+\end{figure}
+
+When an object as large as a star rotates, the hemisphere moving toward the observer is blueshifted, and the hemisphere moving away from the observer is redshifted, as seen in Figure \ref{fig:triaud-fig1}. As a planet transits the star and blocks out starlight, we can observe an average flux offset shifted redward if the planet is covering the blueshifted hemisphere, and blueward if the planet is covering the redshifted hemisphere. 
 
 DIRECT QUOTE: The distribution of λ (or rather, of |λ|) with other (planetary or stellar) parameters can also be used to study the exchange of angular momentum between the planet and its host star, via tidal forces (pull the info from winn paper to show this)
 
