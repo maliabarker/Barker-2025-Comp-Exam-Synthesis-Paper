@@ -652,28 +652,28 @@ When an object as large as a star rotates, the hemisphere moving toward the obse
 As a planet transits the star, it sequentially blocks out differently shifted portions of the star, resulting in characteristic patters in spectroscopic data. For radial velocity (RV) measurements, which is <EXPLAIN>, we can observe an average flux offset shifted blueward if the planet is covering the redshifted hemisphere, resulting in a negative shift in RV measurements, and redward if the planet is covering the blueshifted hemisphere, resulting in a positive shift in RV measurements.
 
 % HOW DO WE OBSERVE IT
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\linewidth]{figs/triaud_fig1.png}
-    \caption{Figure 1 from \citep{triaud2017rossiter} illustrates the Rossiter-McLaughlin effect for the hot Jupiter HD 189733A b, as observed through RV measurements. CONTINUE EXPLAINING STUFF}
+    \caption{Figure 1 from \citep{triaud2017rossiter} illustrates the Rossiter-McLaughlin (RM) effect for the hot Jupiter HD 189733A b, as observed through RV measurements. A visual of the exoplanet transit is provided in the bottom left corner. The RV measurements are color-coded with their Doppler shift to convey the passage of the exoplanet across the stellar surface. Parameters obtained from this observation including the stellar surface rotation speed $v \sin i_*$, the transit depth $D$, and the sky-project spin-orbit angle $\lambda$ are included in the top right.}
     \label{fig:triaud-fig1}
 \end{figure}
 
-The Rossiter-McLaughlin effect is observed through RV measurements made with spectrographs <maybe explain what spectrographs are? which collect light blah blah>. As seen in Figure \ref{fig:triaud-fig1}, as a planet enters the transit and blocks the redshifted stellar hemisphere, there is a negative shift in the RV measurements. As the planet exits the transit and blocks the blueshifted hemisphere, there is a positive shift in the RV measurements.
+The Rossiter-McLaughlin effect is observed through RV measurements made with spectrographs <maybe explain what spectrographs are? which collect light blah blah>. As seen in the RV curve taken by the HARPS spectrograph in Figure \ref{fig:triaud-fig1}, as the planet enters the transit and blocks the redshifted stellar hemisphere, there is a negative shift in the RV measurements. As the planet exits the transit and blocks the blueshifted hemisphere, there is a positive shift in the RV measurements.
 
 % WHAT CAN WE FIND
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.9\linewidth]{figs/winn_fig5.gif}
-    \caption{Figure 6 from \citet{winn2010transits} illustrates the measurement of the spin-orbit angle $\lambda$ using the Rossiter-McLaughlin (RM) effect for three transit scenarios. The dashed line shows the RM effect in the case of no transit event. The dotted lines show the RM effect in a transit event in the case of no limb darkening, and the solid lines include limb darkening.}
+    \includegraphics[width=0.9\linewidth]{figs/winn_fig6.jpg}
+    \caption{Figure 6 from \citet{winn2010transits} illustrates the measurement of the spin-orbit angle $\lambda$ using the Rossiter-McLaughlin (RM) effect for three transit scenarios. All systems have the same impact parameter ($b$) and therefore would produce the same photometric observations, but have different values of $\lambda$ and therefore have different RM curves. The dashed line shows the RM effect in the case of no transit event. The dotted lines show the RM effect in a transit event in the case of no limb darkening, and the solid lines include limb darkening.}
     \label{fig:winn-fig6}
 \end{figure}
 
-The main two parameters we can find from the Rossiter-McLaughlin effect are the projected rotation speed of the stellar surface and the angle between the planet's path and the stellar equator, $\lambda$.
+The main two parameters we can find from the Rossiter-McLaughlin effect are the projected rotation speed of the stellar surface $v \sin i_*$ and the sky-projected angle between the planet's orbital path and the stellar equator, $\lambda$.
 
 If $\lambda = 0$, this means that the planetary orbit and the stellar spin axis are aligned, as seen in the left panel of Figure \ref{fig:winn-fig6}. However, if $\lambda > 0$, then there is a misalignment, and the planet's orbit is tilted relative to the stellar rotation, as seen in the middle and right panels of Figure \ref{fig:winn-fig6}.
 
-Combined with other planetary and stellar parameters, $\lambda$ can be used to understand tidal decay rates. As discussed in section \ref{sec:}, tidal interactions tend to move towards spin-orbit alignment. Transfer of angular momentum between the planet's orbit and host star's spin occur most efficiently when they are aligned, or $\lambda = 0$ \citet{ogilvie2014tidal}. This causes orbital decay to proceed faster.
+Combined with other planetary and stellar parameters, $\lambda$ can be used to understand tidal decay rates. As discussed in section \ref{sec:tidaldissipation}, tidal interactions tend to move towards spin-orbit alignment. Transfer of angular momentum between the planet's orbit and host star's spin occur most efficiently when they are aligned, or $\lambda = 0$ \citet{ogilvie2014tidal}. This causes orbital decay to proceed faster.
 
 Furthermore, understanding spin-orbit alignment may give us clues into the initial migration patterns of UHJs. Disk migration tends to keep the hot Jupiter in a co-planar orbit ($\lambda \approx 0$), while high-eccentricity migration would most likely result in non-coplanar orbits \citep{triaud2017rossiter}.
 
