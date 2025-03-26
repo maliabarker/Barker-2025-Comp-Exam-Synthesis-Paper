@@ -631,56 +631,55 @@ Explain how precise measurements of transit timings can indicate changes in orbi
     - light curves (orbital periods)
     - planet needs to transit
 
-
-
 \subsubsection{Spectroscopic Techniques}
+% NOTE: We are just talking about transit spectroscopy NOT all exoplanet or star spectroscopy. We also do not talk about observing planetary atmospheric parameters, but maybe I should mention that this is something that CAN be observed through these methods, but is out of the scope of this paper?
+- Describe what spectroscopy is and what spectroscopic techniques are.
+% ————The Rossiter-McLaughlin Effect————
+% WHAT IS IT
+The Rossiter–McLaughlin effect, derived from papers on eclipsing binary stars by \citep{rossiter1924detection} and \citep{mclaughlin1924some}, and first observed in exoplanets by \citep{queloz2000detection} and \citep{bundy2000search}, is based on the Doppler effect, which is the shift in frequency of a wave as the source moves towards or away from an observer. For example, as an emergency vehicle approaches an observer, they may hear the pitch of the sirens increase, then hear a decrease in pitch as it retreats. This occurs because as the vehicle quickly approaches, the sound waves in front of it are compressed, resulting in a higher frequency and, therefore, a higher pitch. As the vehicle retreats, the sound waves are stretched, resulting in a lower frequency and, therefore, a lower pitch. 
 
-- Describe what spectroscopy is and what spectroscopic techniques are. 
-
-- just regular spectroscopy:
-    - can find "Changes in the stellar absorption lines can be produced by absorption features in the planetary atmosphere" (learn more about the atmosphere), (gaudi and winn)
-
-- rossiter-mclaughlin effect 
-    - can find the projected rotation speed of the stellar surface
-    - can find $\lambda$, the angle between sky projections of the stellar spin axis and the orbit normal (provides info about planetary spin-orbit alignment, which can then give us info about the synchronization due to tidal forces mentioned by Ogilvie, or even "possible means of discriminating among migration theories" (gaudi and winn)) (QUESTION: is this the same as the lambda in winn 2010)
-
-- planet doesn't need to transit BUT transit spectroscopy is super valuable
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{}
-    \caption{Caption}
-    \label{fig:enter-label}
-\end{figure}
+The same is true for wavelengths of light. If a light source is moving towards an observer, the wavelengths of light are compressed and shifted towards the blue end of the electromagnetic spectrum (this is called a blueshift) and when the light source moves away from the observer, the wavelengths are stretched and shifted towards the red end of the spectrum (this is called a redshift).
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\linewidth]{figs/winn_fig5.png}
-    \caption{Figure 5 from \citep{winn2010transits} illustrates the Rossiter-McLaughlin effect, which uses spectroscopy, or the collected of light wavelengths, to detect an exoplanet transit.}
-    \label{fig:winn-fig5}
+    \includegraphics[width=0.7\linewidth]{figs/gaudi_fig1.jpg}
+    \caption{Figure 1 from \citep{gaudi2007prospects} illustrates the physics of the Rossiter-McLaughlin effect for three stages of an exoplanet transit. The first row shows the transit about the star, unaltered. The second row shows the blue and red-shifted hemispheres of the star, illustrating the color-shifted starlight that is blocked as the exoplanet transits. The third row shows the characteristic "bump" in a stellar absorption line, assuming stellar rotation is the main source of shifted frequency. The fourth row shows the same, yet slightly less apparent "bump" in a stellar absorption line if stellar rotation is not the main source of frequency shifts.}
+    \label{fig:gaudi-fig1}
 \end{figure}
 
-The Rossiter–McLaughlin effect, derived from papers on eclipsing binary stars by \citep{rossiter1924detection} and \citep{mclaughlin1924some}, and first observed in exoplanets by \citep{queloz2000detection} and \citep{bundy2000search} is based on the Doppler effect, which is the shift in frequency of a wave as an object moves towards or away from an observer. For example, as an emergency vehicle approaches an observer, they may hear the pitch of the sirens increase, then hear a decrease in pitch as it retreats. This occurs because as the vehicle quickly approaches, the sound waves in front of it are compressed, resulting in a higher frequency and, therefore, a higher pitch. As the vehicle retreats, the sound waves are stretched, resulting in a lower frequency and, therefore, a lower pitch. 
+When an object as large as a star rotates, the hemisphere moving toward the observer is blueshifted, and the hemisphere moving away from the observer is redshifted, as seen in the second row of Figure \ref{fig:gaudi-fig1}. 
 
-The same is true for wavelengths of light. If a light source is moving towards an observer, the wavelengths of light are compressed and shifted towards the blue end of the electromagnetic spectrum (this is called a blueshift) and when the light source moves away from the observer, the wavelengths are stretched and shifted towards the red end of the spectrum (this is called a redshift). 
+As a planet transits the star, it sequentially blocks out differently shifted portions of the star, resulting in characteristic patters in spectroscopic data. For radial velocity (RV) measurements, which is <EXPLAIN>, we can observe an average flux offset shifted blueward if the planet is covering the redshifted hemisphere, resulting in a negative shift in RV measurements, and redward if the planet is covering the blueshifted hemisphere, resulting in a positive shift in RV measurements.
 
+% HOW DO WE OBSERVE IT
 \begin{figure}
     \centering
     \includegraphics[width=0.8\linewidth]{figs/triaud_fig1.png}
-    \caption{Figure 1 from \citep{triaud2017rossiter} illustrates the Rossiter-McLaughlin effect for the hot Jupiter HD 189733A b. CONTINUE EXPLAINING STUFF}
+    \caption{Figure 1 from \citep{triaud2017rossiter} illustrates the Rossiter-McLaughlin effect for the hot Jupiter HD 189733A b, as observed through RV measurements. CONTINUE EXPLAINING STUFF}
     \label{fig:triaud-fig1}
 \end{figure}
 
-When an object as large as a star rotates, the hemisphere moving toward the observer is blueshifted, and the hemisphere moving away from the observer is redshifted, as seen in Figure \ref{fig:triaud-fig1}. As a planet transits the star and blocks out starlight, we can observe an average flux offset shifted redward if the planet is covering the blueshifted hemisphere, and blueward if the planet is covering the redshifted hemisphere. 
+The Rossiter-McLaughlin effect is observed through RV measurements made with spectrographs <maybe explain what spectrographs are? which collect light blah blah>. As seen in Figure \ref{fig:triaud-fig1}, as a planet enters the transit and blocks the redshifted stellar hemisphere, there is a negative shift in the RV measurements. As the planet exits the transit and blocks the blueshifted hemisphere, there is a positive shift in the RV measurements.
 
-DIRECT QUOTE: The distribution of λ (or rather, of |λ|) with other (planetary or stellar) parameters can also be used to study the exchange of angular momentum between the planet and its host star, via tidal forces (pull the info from winn paper to show this)
-
+% WHAT CAN WE FIND
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.5\linewidth]{figs/winn_fig6.png}
-    \caption{Caption}
+    \includegraphics[width=0.9\linewidth]{figs/winn_fig6.png}
+    \caption{Figure 6 from \citet{winn2010transits} illustrates the measurement of the spin-orbit angle $\lambda$ using the Rossiter-McLaughlin (RM) effect for three transit scenarios. The dashed line shows the RM effect in the case of no transit event. The dotted lines show the RM effect in a transit event in the case of no limb darkening, and the solid lines include limb darkening.}
     \label{fig:winn-fig6}
 \end{figure}
+
+The main two parameters we can find from the Rossiter-McLaughlin effect are the projected rotation speed of the stellar surface and the angle between the planet's path and the stellar equator, $\lambda$.
+
+If $\lambda = 0$, this means that the planetary orbit and the stellar spin axis are aligned, as seen in the left panel of Figure \ref{fig:winn-fig6}. However, if $\lambda > 0$, then there is a misalignment, and the planet's orbit is tilted relative to the stellar rotation, as seen in the middle and right panels of Figure \ref{fig:winn-fig6}.
+
+Combined with other planetary and stellar parameters, $\lambda$ can be used to understand tidal decay rates. As discussed in section \ref{sec:}, tidal interactions tend to move towards spin-orbit alignment. Transfer of angular momentum between the planet's orbit and host star's spin occur most efficiently when they are aligned, or $\lambda = 0$ \citet{ogilvie2014tidal}. This causes orbital decay to proceed faster.
+
+Furthermore, understanding spin-orbit alignment may give us clues into the initial migration patterns of UHJs. Disk migration tends to keep the hot Jupiter in a co-planar orbit ($\lambda \approx 0$), while high-eccentricity migration would most likely result in non-coplanar orbits \citep{triaud2017rossiter}.
+
+Collecting RV measurements using spectrographs can help us understand both the past and future of hot Jupiters. While this is already a bolstered field and measurements are at an all time high, the increase of observations through new missions and spectrographs combined with photometric observations would greatly help the community in continuing to understand the migration patterns of hot Jupiters and where they may end up in their futures.
+
+% DIRECT QUOTE: The distribution of $\lambda$ (or rather, of |$\lambda$|) with other (planetary or stellar) parameters can also be used to study the exchange of angular momentum between the planet and its host star, via tidal forces (pull the info from winn paper to show this)
 
 \subsubsection{Ground vs. Space Based Observations}
 
