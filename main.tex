@@ -425,7 +425,13 @@ The galactic engulfment rate scales with the tidal dissipation rate. So, if we c
 
 Analytical models are useful in estimating the parameters of a system and predicting the behavior of the bodies in the system. 
 
-As mentioned in the introduction, <quickly review exoplanet transits and occultations>. Direct observations of transits and/or occultations of course are valuable, but we can also do some predictions on these observations to do things like predict the likelihood of a future transit, <something else here>, or even optimize future observing plans to maximize the likelihood of detecting orbital decay. 
+As mentioned in the introduction, <quickly review exoplanet transits and occultations>. Transit and occultation light curves can tell us about planetary and stellar radii, orbital inclination, and mean density of the star. By tracking changes in mid-times and/or orbital parameters, we can also detect other planets in system.
+
+Direct observations of transits and/or occultations of course are valuable, but we can also do some predictions on these observations to do things like predict the likelihood of a future transit, <something else here>, or even optimize future observing plans to maximize the likelihood of detecting orbital decay. 
+
+Even when it is possible to have numerical values, it can help to have analytical approximations as well as uncertainties and covariances. 
+
+Analytical approximations are good for planning observations. For example, which systems will have the most precise measurement of orbital inclination, how many transits do I need to observe before statistical error in planetary radius is smaller than systematic error. They can also help in speeding up the convergence of optimization algorithms, and can be useful in order-of-magnitude estimates of observability of subtle transit effects such as transit-timing variations (TTVs), precession-induced changes, and asymmetry in ingress and egress due to non-zero eccentricity.
 
 \begin{figure}[htbp]
     \centering
@@ -437,13 +443,6 @@ As mentioned in the introduction, <quickly review exoplanet transits and occulta
 % % Carter 2008: Analytical Approximations for Transit Light-Curve Observables, Uncertainties, and Covariances 
 % \cite{carter2008analytic}
 
-% - light curves can be used to find planet parameters, this uses an analytical approach to estimate these parameters without light curves?
-% - transit light curves can tell us about planetary and stellar radii, orbital inclination, and mean density of the star. Can also detect other planets in system by observing changes in orbital params or changes in collections of mid-times
-% - Even when it is possible to have numerical values, it can help to have analytical approximations as well as uncertainties and covariances
-% - Analytical apprx are good for:
-%     - Planning observations. For example: which systems will have most precise measurement of orbital inclination, how many transits do I need to observe before stat error in planetary radius is smaller than systematic err
-%     - Speeding up convergence of optimization algos
-%     - useful in order-of-mag estimates of observability of subtle transit effects such as: TTVs, precession-induced changes, asymmetry in ingress and egress due to non-zero eccentricity
 % - Their models assume flux measurements are made continuously throughout transit and stellar limb darkening is neglible
 % - Approximation of no limb darkening can ACTUALLY be used for mid-IR bandpasses (WHY??) so everything in this paper assumes observations around the IR bandpasses so that limb darkening effects can be ignored
 % - Equation 1 and 2 are exact solutions, to make more analytical approximations, some assumptions are made:
@@ -635,14 +634,29 @@ Explain how precise measurements of transit timings can indicate changes in orbi
     - rossiter-mclaughlin effect 
     - planet doesn't need to transit BUT transit spectroscopy is super valuable
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.5\linewidth]{figs/winn_fig5.png}
-    \caption{Caption}
+    \includegraphics[width=0.8\linewidth]{figs/winn_fig5.png}
+    \caption{Figure 5 from \citep{winn2010transits} illustrates the Rossiter-McLaughlin effect, which uses spectroscopy, or the collected of light wavelengths, to detect an exoplanet transit.}
     \label{fig:winn-fig5}
 \end{figure}
 
+The Rossiter–McLaughlin effect, derived from papers by \citep{rossiter1924detection} and \citep{mclaughlin1924some}, is based on the doppler effect, which is the shift in frequency of a wave as an object moves towards or away from an observer. For example, as an emergency vehicle approaches an observer, they may hear the pitch of the sirens increase, then hear a decrease in pitch as it retreats. This occurs because as the vehicle quickly approaches, the sound waves in front of it are compressed, resulting in a higher frequency and therefore higher pitch. As the vehicle retreats, the sound waves are stretched, resulting in a lower frequency and, therefore lower pitch. 
+
+The same is true for wavelengths of light. If a light source is moving towards an observer, the wavelengths of light are compressed and shifted towards the blue end of the electromagnetic spectrum (this is called a blueshift) and when the light source moves away from the observer, the wavelengths are stretched and shifted towards the red end of the spectrum (this is called a redshift). 
+
 \begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{}
+    \caption{Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+When an object as large as a star rotates, the part of the star moving towards the observer is blueshifted, and the part of the star moving away from the observer is redshifted, as seen in Figure \ref{fig:}
+
+DIRECT QUOTE: The distribution of λ (or rather, of |λ|) with other (planetary or stellar) parameters can also be used to study the exchange of angular momentum between the planet and its host star, via tidal forces (pull the info from winn paper to show this)
+
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\linewidth]{figs/winn_fig6.png}
     \caption{Caption}
@@ -836,3 +850,12 @@ Emphasize the significance of addressing the identified research gaps to enhance
 \section{References}
 \printbibliography[heading=none]
 \end{document}
+
+% Carter et. al NOTES (already used/don't need)
+% - light curves can be used to find planet parameters, this uses an analytical approach to estimate these parameters without light curves?
+% - transit light curves can tell us about planetary and stellar radii, orbital inclination, and mean density of the star. Can also detect other planets in system by observing changes in orbital params or changes in collections of mid-times
+% - Even when it is possible to have numerical values, it can help to have analytical approximations as well as uncertainties and covariances
+% - Analytical apprx are good for:
+%     - Planning observations. For example: which systems will have most precise measurement of orbital inclination, how many transits do I need to observe before stat error in planetary radius is smaller than systematic err
+%     - Speeding up convergence of optimization algos
+%     - useful in order-of-mag estimates of observability of subtle transit effects such as: TTVs, precession-induced changes, asymmetry in ingress and egress due to non-zero eccentricity
