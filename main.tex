@@ -408,43 +408,76 @@ The galactic engulfment rate scales with the tidal dissipation rate. So, if we c
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\linewidth]{figs/adams_fig11.png}
-    \caption{Caption}
+    \includegraphics[width=\linewidth]{figs/adams_fig11.jpg}
+    \caption{Values of $Q^{'}_*$ based on observational and theoretical calculations. Red triangles are the $3\sigma$ lower limit (HOW WERE THESE CALCULATED). Systems with negative values for $\dot{P}$ (indicating decaying orbits) but insignificant detections ($<3\sigma$ detection WHAT DOES THIS MEAN??) have $Q^{'}_*$ values plotted as open blue circles. The two systems with negative, significant values of $\dot{P}$, WASP-12 b and TrES-1 b, have $Q^{'}_*$ values plotted as solid blue circles. The theoretical estimates of $Q^{'}_*$, calculated using system parameters and the grid from \citet{weinberg2023orbital}, are plotted as purple plus signs.}
     \label{fig:adams-fig11}
 \end{figure}
 
 
+
 \clearpage
 
-\subsection{Detection and Analysis of Transits and Occultations}
 
-\subsubsection{Photometric Techniques}
-Review the methods for detecting transits and occultations, as outlined by Winn (2010).
+\subsection{Analytical Models \& Metrics for Optimizing Searches for Tidally Decaying Exoplanets}
 
-\subsubsection{Relevance to Orbital Decay Studies}
-Explain how precise measurements of transit timings can indicate changes in orbital periods, signaling potential tidal decay.
+\subsubsection{Analytical Models \& Proposed Metrics}
+% Discuss the analytical approximations for transit light-curve observables presented by Carter et al. (2008).
 
+Analytical models are useful in estimating the parameters of a system and predicting the behavior of the bodies in the system. 
 
+As mentioned in the introduction, <quickly review exoplanet transits and occultations>. Direct observations of transits and/or occultations of course are valuable, but we can also do some predictions on these observations to do things like predict the likelihood of a future transit, <something else here>, or even optimize future observing plans to maximize the likelihood of detecting orbital decay. 
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\linewidth]{figs/carter_fig1.png}
+    \caption{The piecewise linear model (solid) and exact source model (dashed) of a transit light curve. The vertical axis shows normalized flux, with constant starlight described as $f_0$ and $f_0-\delta$ showing the maximum amount of light being blocked by a star. The horizontal axis shows the four contact times, as also described in Figure \ref{fig:winnfig2}, with the transit mid-time denoted by $t_c$. The fractional transit depth is denoted by $\delta$, T is approximately the transit duration, and $\tau$ is approximately the ingress/egress duration.}
+    \label{fig:carter-fig1}
+\end{figure}
 
+% % Carter 2008: Analytical Approximations for Transit Light-Curve Observables, Uncertainties, and Covariances 
+% \cite{carter2008analytic}
 
-\subsection{Analytical Approaches to Transit Light-Curve Observables}
+% - light curves can be used to find planet parameters, this uses an analytical approach to estimate these parameters without light curves?
+% - transit light curves can tell us about planetary and stellar radii, orbital inclination, and mean density of the star. Can also detect other planets in system by observing changes in orbital params or changes in collections of mid-times
+% - Even when it is possible to have numerical values, it can help to have analytical approximations as well as uncertainties and covariances
+% - Analytical apprx are good for:
+%     - Planning observations. For example: which systems will have most precise measurement of orbital inclination, how many transits do I need to observe before stat error in planetary radius is smaller than systematic err
+%     - Speeding up convergence of optimization algos
+%     - useful in order-of-mag estimates of observability of subtle transit effects such as: TTVs, precession-induced changes, asymmetry in ingress and egress due to non-zero eccentricity
+% - Their models assume flux measurements are made continuously throughout transit and stellar limb darkening is neglible
+% - Approximation of no limb darkening can ACTUALLY be used for mid-IR bandpasses (WHY??) so everything in this paper assumes observations around the IR bandpasses so that limb darkening effects can be ignored
+% - Equation 1 and 2 are exact solutions, to make more analytical approximations, some assumptions are made:
+%     - assume orbital period is large compared to transit duration
+%     - assumes transit occurs in a uniform, straight line motion across stellar disk (meaning it has constant velocity, QUESTION: what would it look like if it didn't? is this something worth discussing?)
+% - Equation 3 is analytical approximation given the above assumptions
+% - Equations 4 and 5 are analytical approximations of two characteristic timescales, time between ingress and egress midpoints and total "ingress" time
+% - These equations can be expanded to include eccentric orbits by replacing a (semimajor axis) and n (angular frequency)
+% - Equations 8-11 are for a piecewise "linear in time" model light curve denoted as F1
+%     - Deviation in this approximation occur near ingress and egress phases (QUESTION: is this because this is linear piecewise function?)
+%     - Most accurate for small values of r & b
+%     - Least accurate for grazing transits
+% - Uses Fisher information analysis to find correlation between parameters (there are 5 in the model: t_c (time of conjunction), tau (QUESTION: what exactly is tau on pg 2), T (total transit time?), delta (idk), and f_0 (unocculted flux)
+%     - When you look at partial time derivative of each parameter, you can see that the model reflects the symmetry of the "real" behavior
+%     - t_c is uncorrelated with the other params
+% - Equation 20 is the covariance matrix for the piecewise function
+% - Equation 21 is the covariance matrix for the piecewise function if we assume we have a great baseline of the unocculted flux f_0 so that f_0=1, making delta the fractional transit depth
+%     - From this we can see that theta is the key controlling param, where theta = r/(1-b^2)
 
-\subsubsection{Analytical Models}
-Discuss the analytical approximations for transit light-curve observables presented by Carter et al. (2008).
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figs/carter_fig2.png}
+    \caption{Caption}
+    \label{fig:carter-fig2}
+\end{figure}
 
-\subsubsection{Implications for Detecting Orbital Decay}
-Examine how these models assist in accurately determining transit times and detecting minute changes indicative of orbital decay.
-
-
-
-
-
-\subsection{Metrics for Optimizing Searches for Tidally Decaying Exoplanets}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figs/winn_fig3.png}
+    \caption{Geometry of a transit and the likelihood of the transit being seen (can tie into the analytical models from Carter or just use it to explain why we would want an idea of the likelihood (because it may not happen based on complicated orbital properties)).}
+    \label{fig:winn-fig3}
+\end{figure}
 
 % Describing delta BIC
-For these planets, we are particularly interested in the decreasing orbital periods when searching for tidal decay. Increasing orbital periods, while interesting, do not indicate tidal decay and therefore are not of interest to us in this instance. 
-
 When fitting a model, we determine the accuracy of the model fit to the actual data using the Bayesian Information Criterion (BIC) \citep{schwarz1978estimating}
 
 \begin{equation}
@@ -475,6 +508,9 @@ In this case, positive values of $\Delta$ BIC, calculated with the equation:
 \end{equation}
 
 indicate a statistical preference for a quadratic model over a linear model.
+
+\subsubsection{Implications for Detecting Orbital Decay}
+% Examine how these models assist in accurately determining transit times and detecting minute changes indicative of orbital decay.
 
 \begin{figure}[htbp]
     \centering
@@ -545,17 +581,126 @@ versus the time since the last recorded observation as of April 5th, 2023. The l
     \label{fig:jackson_fig3}
 \end{figure}
 
-% \subsubsection{Proposed Metrics}
-% Summarize the metrics introduced by Jackson et al. (2023) for optimizing the search for tidally decaying exoplanets.
+Tidally Decaying Exoplanets
+% \cite{jackson2023metrics}
 
-% \subsubsection{Application to UHJ Systems}
-% Evaluate the effectiveness of these metrics when applied to UHJs, considering their unique characteristics.
+% - For host stars rotating more slowly than the planet, interaction between planet and tidal bulge transfers angular momentum from the planet's orbit to the star (this can tie into OGLIVIE PAPER)
+% - Stellar dissipation rate may be related to stellar luminosity
+% - Once gas giant spirals into roche limit, tidal disruption can occur
+%     - Stable: decay timescale determined by tidal decay rate
+%     - UNstable: disruption proceeds rapidly
+%     - Direct accretion if roche limit lies within star
+% - Signs of tidal disruption: tidal/accretion-induced spin-up, young MS stars, anomalous chem signatures in red giants that may be caused by planetary engulfment (maybe in MS stars as well)
+% - based on Q*' (which this scales with it), planetary engulfment occurs between 0.1 and 1/year in milky way HOWEVER, the value of Q*' may not be set and may depend on a few things (CAN TIE THIS INTO OTHER PAPERS), ONE WAY to constrain this observationally (and not theoretically with stellar models) is to observe tidal decay
+% - Based on Carter 2008 equations, we get equation 11, the uncertainty on the central time (QUESTION: is this mid-time?), which shows that the uncertainty increases with photometric uncertainty, decreases as transit depth and sampling rate increase. Also increases with ingress/egress duration because if b->1 (very long ingress/egress) then the light curve would be nearly v-shaped and we would need the exact time it switches from a downwards trend to an upwards trend to get the mid-time accurately
+% - Figure 1 shows possible mid-time uncertainties on some systems based on equation 12, which relates uncertainty to stellar magnitude
+% - We can use equation 18 to calculate the time at which the uncertainty on the transit becomes larger than the transit duration. Figure 3 shows some systems with their critical point of the uncertainty growing larger than transit duration and time that has passed since its last observation. Anything below the y=x line is something that has maybe passed the point of uncertainty being larger than transit duration and thus would be useful to follow up on
+% - Equation 22 predicts the orbital decay rate (dP/dE) based on stellar and planetary parameters. HOWEVER, applications in the paper use a constant fixed value of Q*, which isn't exactly true (can tie into Ogilvie paper)
+% - Note: in figure 4, there is a S/N which means signal to noise, which is just the "signal" or the actual decay rate divided by the "noise" or the uncertainty.
+% - Because dP/dE is so much smaller than T0 and P, T0 and P need to have pretty small error bars to be able to say we see an actual dP/dE signal
+% - We can use equation 35 to estimate expected delta BIC for future observations
+% - As we can see in figure 6, delta BIC initially decreases, showing preference for linear model, before increasing. This is because curvature needs to build up over time to see the quadratic term. Depending on the number and frequency of observations, timing uncertainties, and decay rate, we can calculate the crossover epoch, which is the point at which a quadratic model is favored over a linear model. For example, we can choose a desired delta BIC and assign system properties (dP/dE, timing uncertainties) and calculate the minimum number of transits observed before crossover epoch is achieved. So, we can apply this equation to a number of different observing campaign goals and get some info back
+% - Overall, can use the analytical delta BIC equation to plan different observing campaigns and see best way to collect data in not only frequency and total number, but also with uncertainties based on ground and space-based scopes (CAN TIE THIS INTO UNCERTAINTIES MAYBE?)
+% - Section 3.2 shows real analysis of analytical delta BIC application for 4 different planetary systems. Shows that these systems will not usually reach WASP-12 b levels of delta BIC decay detection until 2030 (TrES-1 b), 2025 (TrES-2 b), 2024 (HAT-P-19 b, although this one is super weird, maybe because of uncertainties??)
+% - Caveats: 
+%     - used a linear regression approach for the uncertainties (the whole S thing from numerical recipes) and thus analytical delta BIC equation, but real data could have asymmetric uncertainties (QUESTION: is this what Brian is usually talking about when he mentions gaussian uncertainties??)
+%     - delta BIC usually only works when sample size is much larger than the number of model parameters (however this is usually fulfilled because to search for decay you need a lot of observations anyways)
+%     - doesn't look into precession and/or other forms of changing orbit
 
 
+\subsubsection{Application to UHJ Systems}
+Evaluate the effectiveness of these metrics when applied to UHJs, considering their unique characteristics.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figs/yee_fig4.png}
+    \caption{Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+\clearpage
 
 
 \subsection{Observational Evidence and Challenges}
+
+\subsubsection{Photometric Techniques}
+Review the methods for detecting transits and occultations, as outlined by Winn (2010).
+
+Explain how precise measurements of transit timings can indicate changes in orbital periods, signaling potential tidal decay.
+
+- Flux collection: 
+    - light curves (orbital periods)
+    - planet needs to transit
+- Spectroscopy collection:
+    - rossiter-mclaughlin effect 
+    - planet doesn't need to transit BUT transit spectroscopy is super valuable
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{figs/winn_fig5.png}
+    \caption{Caption}
+    \label{fig:winn-fig5}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{figs/winn_fig6.png}
+    \caption{Caption}
+    \label{fig:winn-fig6}
+\end{figure}
+
+\subsubsection{Ground vs. Space Based Observations}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{figs/winn_fig8.png}
+    \caption{Comparison of ground-based observations (left) vs. space-based observations of transit light curves. In the top right panel, the bump in the transit light curve is theorized to be the covering of a solar dark spot by the transiting planet. This is a great example of detail from space-based observations that you cannot get from ground-based observations.}
+    \label{fig:winn-fig8}
+\end{figure}
+
+Write about the increase of usage of ametuer astronomer data. Proof of concept of this usage can be provided by previous example of TESS object of interest by \citep{sgro2024confirmation}. 
+
+
+\subsubsection{Challenges in Maintaining Proper Data Collected Practices}
+%  This will mostly cover Elisabeth's paper
+
+% % Adams 2024: Doomed Worlds I. No new evidence for orbital decay in a long-term survey of 43 ultra-hot Jupiters
+% \cite{adams2024doomed}
+
+% - UHJs (<3 day orb per) usually occur around younger stars, maybe because something happens to these planets over longer periods of time. This could be planetary engulfment (while stars are still on MS). 
+% - Q*' gives us estimated planetary engulfment rates, but this is not constrained well. Incorporating NON-linear dissipation (THIS ALSO COMES UP IN OGLIVIE PAPER) has given us a better range depending on stellar age and mass, could be key. 
+% - With increasing observations over time (a lot now reaching the decade mark) it is easier to start learning trends in the data. However, some systems with limited observations over the years usually are ruled out with additional observations. It is also important to rule out tidal decay by looking at all the other options (apsidal precession, effects of companion objects, line of sight acceleration).
+% - BIC can help us find optimal observing campaigns because it is obviously important to know how often you need to observe to get optimal results. (THIS CAN TIE INTO BRIAN'S PAPER)
+% - Some systems, while they show strong evidence for tidal decay, are very difficult to observe from ground based observations and need space-based scopes or largest ground scopes (like Kelper-1658 b)
+% - Fitting light curves using pylight-curve which uses emcee (by dan). For this work, transit mid-time vals were not sensitive to chosen parameter values such as a/R* or limb-darkening coefficients. WHAT IF IT WAS?? 
+% - Detection of these timing signatures requires very precise timing analysis. Some issues that have come up with this are detecting duplicate times, composite times, and false timing conversion. This is why it is VERY important to identify exact timing system (to combat false timing conversion) and exact source of the original data (to combat duplicates). 
+% - Duplicates can have a large impact if it has low errors or occurs at critical point. They are source of error that can be completely eliminated with proper data maintenance.
+% - Composites (times derived from more than 1 light curve) can have the following issues: their error bars are usually much smaller because they compress all timing info into single point, they obscure original data source which makes it difficult to find potential timing errors, and can lead to double counting transits
+%      - Composited include the following: stacked light curves where transits from multiples epochs are stacked to actually see the transits, which is common in ground-based surveys where it is difficult to detect a single transit; when ephemeris mid-times are reported for composite data, this usually anchors all the combined transits into one reported epoch, which results in a very specific (small error) mid-time for one epoch and will weight the BIC equation; weighted average times are when two mid-times from different sources are averaged together, which makes it difficult to deconstruct this and look for errors in the observations
+%      - Example of a composite mid-time is for CoRoT-2 where 82 transits were stacked and when unstacked, the original transits had 50 percent larger errors, which changed delta BIC from 33 to -2 (pretty much ruling out tidal decay)
+% - Timing systems: 
+%     - to remove the motion of the earth around the sun and the motion of the sun around the solar system barycenter, we must use a dynamical timing system to avoid cyclical variations in astronomical time series. This is why we use BJD TDB timing system and scale (respectively). 
+%     - Historically, helicentric julian date HJD is much easier to calculate and this has been preferred over BJD, and one can argue that using one or the other doesn't have much significance as the difference is only about 1 second and most transit observations do not have the accuracy within this range to be affected. However, HJD is usually in UTC time scale while BJD is usually in TDB timescale. This difference is about 64.184 seconds as of 2024 (this offset changes with addition of leap seconds). This is why it is very important to also report the time SCALE as well as the system, which isn't always reported and more often than not assumed to be associated (UTC with HJD, TDB with BJD). 
+% - Running models: fit to linear and quadratic models, calculated delta BIC, ran omit-one delta BIC test, calculated a rescaled delta BIC, investigated outliers that failed the omit one test and re-ran everything again with corrected data
+% - Timing Analysis: 
+%     - WASP-12 b: still looking good
+%     - WASP-19 b: period of just 0.79 days and data spanning 15 yrs (good candidate), however, decaying at an order of magnitude smaller than 12b which makes Q*' an order of magnitude larger, however, timing errors that were corrected made the delta BIC drop to insignificant levels, this may be ruled out as candidate
+%     - CoRoT-2 b: Data spanning 18 yrs, had composite errors (in CoRoT mission data, 82 transits were combined), timing scale errors (in ETD, data was labeled as HJD when it was really JD and in a Ozturk&Erdem, data was labeled as BJD/TDB but was possibly JD), and duplicate errors. Once all of these errors were addressed, the results delta BIC was -2, showing no tidal decay
+%     - WASP-121 b: the early data really need to be refit but the actual timing data has not been published, so this cannot happen. When scaled, the delta BIC still stayed positive (14), showing that the error bars are good and this system just really needs more data observed
+%     - WASP-46 b: Has good data, lots of scatter in data before 2015 with 7 outlier points, removing these points changes delta BIC from 32-149, and when rescaled changes to 2, flagged for reanalysis
+%     - TrES-1 b: good baseline of data and no obvious timing errors, has siginifgant positive delta BIC (69) HOWEVER, the Q*' value is five orders of magnitude lower than what we expect for the decay rate, so the decay is most likely caused by something else
+%     - Kepler-1658 b: has a very shallow transit depth, so hard to observe with ground-based telescopes. rapidly decaying and star is evolved off MS, weinburg says g-mode does not explain rapid decay but vissapragada says could be inertial wave dissipation and rapid stellar rotation. confirmation could be possible with a few more observations, so withing a year or two
+% - Answering the question: was WASP-12 b the first world to have detected tidal decay because it had enough transits observed OR is there something special about the WASP-12 b system?
+%     - Test 1: Sets all planet's decay rates to WASP-12 b decay rate and sees what the delta BIC would be given the number of observations each system has. Shows that nearly half of the systems would have has delta BIC > 30 (in reality only 1 did) and 4 systems would have had 10x larger delta BICS than WASP-12b
+%     - Test 2: Sets Q*' (tidal dissipation factor) to be the same for all systems and calculated the decay rate for each system. seven planets had value >= 3x the observed error in the decay rate
+%     - Overall, for 20 of the systems, there is evidence that we should have detected tidal decay but we have not
+% - Calculated values of Q*' (tidal dissipation factor) and tau (estimate decay timescale). Q*' is inversely proportional to rate of period change. 
+% - Weinberg 2024 has table of Q*' based on stellar age and mass that can be interpolated. Stellar models with radiative cores and convective envelopes usually have smaller values than higher mass MS stars with convective cores. If highmass stars are not on the MS, then they no longer have a convective (instead, radiative) core and the Q*' value drops again. CAN TIE THIS INTO OGLIVIE PAPER
+% - CONCLUSIONS: 
+%     - For the two systems where orbital decay is likely (WASP-12 b and Kepler-1658 b), their host stars may have evolved off the MS which would offer explanation for rapid decay and maybe point towards evidence that a star needs to be evolved off the MS to exhibit decay (QUESTION: but then what does that say about the observation that most UHJ are around young stars?)
+%     - delta BIC values below 30-50 should be tentative because of usual timing data errors, especially in the estimation of timing uncertainties
+%     - systems need to be observed at least once a year
+
 
 \begin{figure}[htbp]
     \centering
@@ -564,6 +709,9 @@ versus the time since the last recorded observation as of April 5th, 2023. The l
     The top panel displays the full range of $\Delta$BIC values, with WASP-12 b standing out as a clear outlier. The middle panel zooms in to highlight the smaller $\Delta$BIC values, showing the five systems with the next highest $\Delta$BIC values after WASP-12 b. For these systems, uncertainties on their measured orbital period changes (P???) are plotted below the corresponding bars. The bottom panel presents the $\Delta$BIC values after applying a rescaling procedure to the data. Details of this rescaling process are discussed below.}
     \label{fig:adams-fig2}
 \end{figure}
+
+For these planets, we are particularly interested in the decreasing orbital periods when searching for tidal decay. Increasing orbital periods, while interesting, do not indicate tidal decay and therefore are not of interest to us in this instance. 
+% Note: before, this was then followed by a discussion on delta BIC, so will have to find a way to transition again
 
 % Describing the rescaling process
 In reported literature, uncertainties on mid-transit times in light curves can sometimes be unrealistically small. When fitting a model to transit data, each data point is weighted according to its photometric uncertainty, $\sigma$, with weights proportional to $\frac{1}{\sigma}$. If a data point has an exceptionally small uncertainty, it disproportionately influences the model fit, effectively "weighing down" the resulting model and skewing the fit toward that point.
@@ -594,44 +742,45 @@ In \ref{fig:adams-fig4}, the data points highlighted by red diamonds have very s
 
 
 
+\subsection{Proposed Future Research}
 
-
-\subsection{Gaps in Current Research}
-
-\subsubsection{Limited Observational Data}
-Highlight the need for more extended and precise observational campaigns to detect subtle orbital decay signals.
-
-\subsubsection{Theoretical Model Limitations}
+\subsubsection{Advanced Modeling/Theoretical Model Limitations}
 Discuss the limitations of current tidal dissipation models in explaining the varying rates of orbital decay observed.
 
-\subsubsection{Influence of Stellar Properties}
-Identify the need for more research on how different stellar properties (e.g., age, rotation rate, magnetic activity) affect tidal dissipation and orbital decay.
-
-
-
-
-
-\subsection{Proposed Future Research Directions}
-
-\subsubsection{High-Precision Transit Timing}
-Advocate for the development of more precise transit timing methods to detect minute changes in orbital periods.
-
-\subsubsection{Comprehensive Surveys}
-Propose conducting comprehensive surveys of UHJs with consistent observation protocols to gather uniform data on orbital periods.
-
-\subsubsection{Advanced Modeling}
 Encourage the development of more sophisticated models that incorporate a wider range of stellar and planetary properties to predict tidal dissipation and orbital decay more accurately.
 
 - Interpolable grid of values of Q* based on stellar age and mass, so we can redo analytical approximations. For example, figure 1 of Jackson. 
 
+- If we are using theoretical models for things like the tidal dissipation rate, such as the models and interpolable grid in weinberg et all 2023, then we need to also focus on constraining stellar properties, as these are not fully constrained for many systems and therefore make using an interpolable grid based on stellar parameters obsolete (we can see how the theoretical values range from adams 2024 paper)
 
+- We also need to focus more on stellar properties and structure for the models themselves. As more research is done on different modes and how different waves such as inertial waves behave inside stars and effect tidal dissipation rates, it will be important to understand the exact structure of these stars. This can also be true for the internal structure of planets, because the tidal dissipation rate due to inertial waves also exists in planets, and if UHJs really do have a large solid core, then this would mean a lot for the behavior of inertial waves. 
 
+- Idk what to write about model limitations honestly. I know that they are there, will need to look more into this, maybe re-review the conclusions in Ogilvie or Weinberg papers
+
+- Creating metrics for different types of orbital motion (apsidal precession, line-of-sight acceleration, look into all the models they had on the paper from the people in the Susie meeting)
+
+- Maybe talk about how something else can be used instead of BIC for metrics?
+
+- Maybe talk about the n-body simulations and that while we need the asteroseismology models, we also need these orbital models as well (although do things like VPLanet also introduce the same models of modes and waves generated in stars to simulate the n-body simulations or is it all just simplified grav interactions?)
+
+\subsubsection{High-Precision Transit Timing/Comprehensive Surveys}
+- Highlight the need for more extended and precise observational campaigns to detect subtle orbital decay signals.
+
+- Advocate for the development of more precise transit timing methods to detect minute changes in orbital periods.
+
+- Propose conducting comprehensive surveys of UHJs with consistent observation protocols to gather uniform data on orbital periods.
+
+- Propose one large database like what Elisabeth proposes in her paper.
+
+- Talk about future space telescope missions that may be useful/will collect a lot more transits (maybe the very large telescope or vera rubin, which will collect SO MUCH data and data pipelines need to be built for that to try to get as many light curves as possible!)
+
+\clearpage 
 
 
 \subsection{Conclusion}
 
 \subsubsection{Summary of Findings}
-Recap the key insights gained from synthesizing the five articles on tidal decay in UHJ systems.
+Recap the key insights gained from synthesizing the articles on tidal decay in UHJ systems.
 
 \subsubsection{Importance of Continued Research}
 Emphasize the significance of addressing the identified research gaps to enhance our understanding of tidal interactions and the evolution of UHJ systems.
@@ -640,215 +789,47 @@ Emphasize the significance of addressing the identified research gaps to enhance
 
 
 
+% \textbf{ADAMS PAPER}
 
-\textbf{ADAMS PAPER}
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=\linewidth]{figs/adams_fig3.png}
+%     \caption{Caption}
+%     \label{fig:enter-label}
+% \end{figure}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\linewidth]{figs/adams_fig3.png}
-    \caption{Caption}
-    \label{fig:enter-label}
-\end{figure}
-
-\clearpage
-
-
-\textbf{CARTER PAPER}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.5\linewidth]{figs/carter_fig1.png}
-    \caption{Caption}
-    \label{fig:enter-label}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.5\linewidth]{figs/carter_fig2.png}
-    \caption{Caption}
-    \label{fig:enter-label}
-\end{figure}
-
-\clearpage
+% \clearpage
 
 
-\textbf{WINN PAPER}
+% \textbf{WINN PAPER}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{figs/winn_fig3.png}
-    \caption{Caption}
-    \label{fig:enter-label}
-\end{figure}
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.5\linewidth]{figs/winn_fig9.png}
+%     \caption{Caption}
+%     \label{fig:enter-label}
+% \end{figure}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{figs/winn_fig5.png}
-    \caption{Caption}
-    \label{fig:enter-label}
-\end{figure}
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.5\linewidth]{figs/winn_fig14.png}
+%     \caption{Caption}
+%     \label{fig:enter-label}
+% \end{figure}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{figs/winn_fig6.png}
-    \caption{Caption}
-    \label{fig:enter-label}
-\end{figure}
+% \clearpage
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{figs/winn_fig8.png}
-    \caption{Caption}
-    \label{fig:enter-label}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{figs/winn_fig9.png}
-    \caption{Caption}
-    \label{fig:enter-label}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{figs/winn_fig14.png}
-    \caption{Caption}
-    \label{fig:enter-label}
-\end{figure}
-
-\clearpage
-
-
-\textbf{YEE PAPER}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.5\linewidth]{figs/yee_fig4.png}
-    \caption{Caption}
-    \label{fig:enter-label}
-\end{figure}
-
-\clearpage
-
-
-PAPER NOTES
-
-% Paper Notes:
-
-% Adams 2024: Doomed Worlds I. No new evidence for orbital decay in a long-term survey of 43 ultra-hot Jupiters
-\cite{adams2024doomed}
-
-- UHJs (<3 day orb per) usually occur around younger stars, maybe because something happens to these planets over longer periods of time. This could be planetary engulfment (while stars are still on MS). 
-- Q*' gives us estimated planetary engulfment rates, but this is not constrained well. Incorporating NON-linear dissipation (THIS ALSO COMES UP IN OGLIVIE PAPER) has given us a better range depending on stellar age and mass, could be key. 
-- With increasing observations over time (a lot now reaching the decade mark) it is easier to start learning trends in the data. However, some systems with limited observations over the years usually are ruled out with additional observations. It is also important to rule out tidal decay by looking at all the other options (apsidal precession, effects of companion objects, line of sight acceleration).
-- BIC can help us find optimal observing campaigns because it is obviously important to know how often you need to observe to get optimal results. (THIS CAN TIE INTO BRIAN'S PAPER)
-- Some systems, while they show strong evidence for tidal decay, are very difficult to observe from ground based observations and need space-based scopes or largest ground scopes (like Kelper-1658 b)
-- Fitting light curves using pylight-curve which uses emcee (by dan). For this work, transit mid-time vals were not sensitive to chosen parameter values such as a/R* or limb-darkening coefficients. WHAT IF IT WAS?? 
-- Detection of these timing signatures requires very precise timing analysis. Some issues that have come up with this are detecting duplicate times, composite times, and false timing conversion. This is why it is VERY important to identify exact timing system (to combat false timing conversion) and exact source of the original data (to combat duplicates). 
-- Duplicates can have a large impact if it has low errors or occurs at critical point. They are source of error that can be completely eliminated with proper data maintenance.
-- Composites (times derived from more than 1 light curve) can have the following issues: their error bars are usually much smaller because they compress all timing info into single point, they obscure original data source which makes it difficult to find potential timing errors, and can lead to double counting transits
-     - Composited include the following: stacked light curves where transits from multiples epochs are stacked to actually see the transits, which is common in ground-based surveys where it is difficult to detect a single transit; when ephemeris mid-times are reported for composite data, this usually anchors all the combined transits into one reported epoch, which results in a very specific (small error) mid-time for one epoch and will weight the BIC equation; weighted average times are when two mid-times from different sources are averaged together, which makes it difficult to deconstruct this and look for errors in the observations
-     - Example of a composite mid-time is for CoRoT-2 where 82 transits were stacked and when unstacked, the original transits had 50 percent larger errors, which changed delta BIC from 33 to -2 (pretty much ruling out tidal decay)
-- Timing systems: 
-    - to remove the motion of the earth around the sun and the motion of the sun around the solar system barycenter, we must use a dynamical timing system to avoid cyclical variations in astronomical time series. This is why we use BJD TDB timing system and scale (respectively). 
-    - Historically, helicentric julian date HJD is much easier to calculate and this has been preferred over BJD, and one can argue that using one or the other doesn't have much significance as the difference is only about 1 second and most transit observations do not have the accuracy within this range to be affected. However, HJD is usually in UTC time scale while BJD is usually in TDB timescale. This difference is about 64.184 seconds as of 2024 (this offset changes with addition of leap seconds). This is why it is very important to also report the time SCALE as well as the system, which isn't always reported and more often than not assumed to be associated (UTC with HJD, TDB with BJD). 
-- Running models: fit to linear and quadratic models, calculated delta BIC, ran omit-one delta BIC test, calculated a rescaled delta BIC, investigated outliers that failed the omit one test and re-ran everything again with corrected data
-- Timing Analysis: 
-    - WASP-12 b: still looking good
-    - WASP-19 b: period of just 0.79 days and data spanning 15 yrs (good candidate), however, decaying at an order of magnitude smaller than 12b which makes Q*' an order of magnitude larger, however, timing errors that were corrected made the delta BIC drop to insignificant levels, this may be ruled out as candidate
-    - CoRoT-2 b: Data spanning 18 yrs, had composite errors (in CoRoT mission data, 82 transits were combined), timing scale errors (in ETD, data was labeled as HJD when it was really JD and in a Ozturk&Erdem, data was labeled as BJD/TDB but was possibly JD), and duplicate errors. Once all of these errors were addressed, the results delta BIC was -2, showing no tidal decay
-    - WASP-121 b: the early data really need to be refit but the actual timing data has not been published, so this cannot happen. When scaled, the delta BIC still stayed positive (14), showing that the error bars are good and this system just really needs more data observed
-    - WASP-46 b: Has good data, lots of scatter in data before 2015 with 7 outlier points, removing these points changes delta BIC from 32-149, and when rescaled changes to 2, flagged for reanalysis
-    - TrES-1 b: good baseline of data and no obvious timing errors, has siginifgant positive delta BIC (69) HOWEVER, the Q*' value is five orders of magnitude lower than what we expect for the decay rate, so the decay is most likely caused by something else
-    - Kepler-1658 b: has a very shallow transit depth, so hard to observe with ground-based telescopes. rapidly decaying and star is evolved off MS, weinburg says g-mode does not explain rapid decay but vissapragada says could be inertial wave dissipation and rapid stellar rotation. confirmation could be possible with a few more observations, so withing a year or two
-- Answering the question: was WASP-12 b the first world to have detected tidal decay because it had enough transits observed OR is there something special about the WASP-12 b system?
-    - Test 1: Sets all planet's decay rates to WASP-12 b decay rate and sees what the delta BIC would be given the number of observations each system has. Shows that nearly half of the systems would have has delta BIC > 30 (in reality only 1 did) and 4 systems would have had 10x larger delta BICS than WASP-12b
-    - Test 2: Sets Q*' (tidal dissipation factor) to be the same for all systems and calculated the decay rate for each system. seven planets had value >= 3x the observed error in the decay rate
-    - Overall, for 20 of the systems, there is evidence that we should have detected tidal decay but we have not
-- Calculated values of Q*' (tidal dissipation factor) and tau (estimate decay timescale). Q*' is inversely proportional to rate of period change. 
-- Weinberg 2024 has table of Q*' based on stellar age and mass that can be interpolated. Stellar models with radiative cores and convective envelopes usually have smaller values than higher mass MS stars with convective cores. If highmass stars are not on the MS, then they no longer have a convective (instead, radiative) core and the Q*' value drops again. CAN TIE THIS INTO OGLIVIE PAPER
-- CONCLUSIONS: 
-    - For the two systems where orbital decay is likely (WASP-12 b and Kepler-1658 b), their host stars may have evolved off the MS which would offer explanation for rapid decay and maybe point towards evidence that a star needs to be evolved off the MS to exhibit decay (QUESTION: but then what does that say about the observation that most UHJ are around young stars?)
-    - delta BIC values below 30-50 should be tentative because of usual timing data errors, especially in the estimation of timing uncertainties
-    - systems need to be observed at least once a year
-    
-% Jackson 2023: Metrics for Optimizing Searches for Tidally Decaying Exoplanets
-\cite{jackson2023metrics}
-
-- For host stars rotating more slowly than the planet, interaction between planet and tidal bulge transfers angular momentum from the planet's orbit to the star (this can tie into OGLIVIE PAPER)
-- Stellar dissipation rate may be related to stellar luminosity
-- Once gas giant spirals into roche limit, tidal disruption can occur
-    - Stable: decay timescale determined by tidal decay rate
-    - UNstable: disruption proceeds rapidly
-    - Direct accretion if roche limit lies within star
-- Signs of tidal disruption: tidal/accretion-induced spin-up, young MS stars, anomalous chem signatures in red giants that may be caused by planetary engulfment (maybe in MS stars as well)
-- based on Q*' (which this scales with it), planetary engulfment occurs between 0.1 and 1/year in milky way HOWEVER, the value of Q*' may not be set and may depend on a few things (CAN TIE THIS INTO OTHER PAPERS), ONE WAY to constrain this observationally (and not theoretically with stellar models) is to observe tidal decay
-- Based on Carter 2008 equations, we get equation 11, the uncertainty on the central time (QUESTION: is this mid-time?), which shows that the uncertainty increases with photometric uncertainty, decreases as transit depth and sampling rate increase. Also increases with ingress/egress duration because if b->1 (very long ingress/egress) then the light curve would be nearly v-shaped and we would need the exact time it switches from a downwards trend to an upwards trend to get the mid-time accurately
-- Figure 1 shows possible mid-time uncertainties on some systems based on equation 12, which relates uncertainty to stellar magnitude
-- We can use equation 18 to calculate the time at which the uncertainty on the transit becomes larger than the transit duration. Figure 3 shows some systems with their critical point of the uncertainty growing larger than transit duration and time that has passed since its last observation. Anything below the y=x line is something that has maybe passed the point of uncertainty being larger than transit duration and thus would be useful to follow up on
-- Equation 22 predicts the orbital decay rate (dP/dE) based on stellar and planetary parameters. HOWEVER, applications in the paper use a constant fixed value of Q*, which isn't exactly true (can tie into Ogilvie paper)
-- Note: in figure 4, there is a S/N which means signal to noise, which is just the "signal" or the actual decay rate divided by the "noise" or the uncertainty.
-- Because dP/dE is so much smaller than T0 and P, T0 and P need to have pretty small error bars to be able to say we see an actual dP/dE signal
-- We can use equation 35 to estimate expected delta BIC for future observations
-- As we can see in figure 6, delta BIC initially decreases, showing preference for linear model, before increasing. This is because curvature needs to build up over time to see the quadratic term. Depending on the number and frequency of observations, timing uncertainties, and decay rate, we can calculate the crossover epoch, which is the point at which a quadratic model is favored over a linear model. For example, we can choose a desired delta BIC and assign system properties (dP/dE, timing uncertainties) and calculate the minimum number of transits observed before crossover epoch is achieved. So, we can apply this equation to a number of different observing campaign goals and get some info back
-- Overall, can use the analytical delta BIC equation to plan different observing campaigns and see best way to collect data in not only frequency and total number, but also with uncertainties based on ground and space-based scopes (CAN TIE THIS INTO UNCERTAINTIES MAYBE?)
-- Section 3.2 shows real analysis of analytical delta BIC application for 4 different planetary systems. Shows that these systems will not usually reach WASP-12 b levels of delta BIC decay detection until 2030 (TrES-1 b), 2025 (TrES-2 b), 2024 (HAT-P-19 b, although this one is super weird, maybe because of uncertainties??)
-- Caveats: 
-    - used a linear regression approach for the uncertainties (the whole S thing from numerical recipes) and thus analytical delta BIC equation, but real data could have asymmetric uncertainties (QUESTION: is this what Brian is usually talking about when he mentions gaussian uncertainties??)
-    - delta BIC usually only works when sample size is much larger than the number of model parameters (however this is usually fulfilled because to search for decay you need a lot of observations anyways)
-    - doesn't look into precession and/or other forms of changing orbit
-
-% Carter 2008: Analytical Approximations for Transit Light-Curve Observables, Uncertainties, and Covariances 
-\cite{carter2008analytic}
-
-- light curves can be used to find planet parameters, this uses an analytical approach to estimate these parameters without light curves?
-- transit light curves can tell us about planetary and stellar radii, orbital inclination, and mean density of the star. Can also detect other planets in system by observing changes in orbital params or changes in collections of mid-times
-- Even when it is possible to have numerical values, it can help to have analytical approximations as well as uncertainties and covariances
-- Analytical apprx are good for:
-    - Planning observations. For example: which systems will have most precise measurement of orbital inclination, how many transits do I need to observe before stat error in planetary radius is smaller than systematic err
-    - Speeding up convergence of optimization algos
-    - useful in order-of-mag estimates of observability of subtle transit effects such as: TTVs, precession-induced changes, asymmetry in ingress and egress due to non-zero eccentricity
-- Their models assume flux measurements are made continuously throughout transit and stellar limb darkening is neglible
-- Approximation of no limb darkening can ACTUALLY be used for mid-IR bandpasses (WHY??) so everything in this paper assumes observations around the IR bandpasses so that limb darkening effects can be ignored
-- Equation 1 and 2 are exact solutions, to make more analytical approximations, some assumptions are made:
-    - assume orbital period is large compared to transit duration
-    - assumes transit occurs in a uniform, straight line motion across stellar disk (meaning it has constant velocity, QUESTION: what would it look like if it didn't? is this something worth discussing?)
-- Equation 3 is analytical approximation given the above assumptions
-- Equations 4 and 5 are analytical approximations of two characteristic timescales, time between ingress and egress midpoints and total "ingress" time
-- These equations can be expanded to include eccentric orbits by replacing a (semimajor axis) and n (angular frequency)
-- Equations 8-11 are for a piecewise "linear in time" model light curve denoted as F1
-    - Deviation in this approximation occur near ingress and egress phases (QUESTION: is this because this is linear piecewise function?)
-    - Most accurate for small values of r & b
-    - Least accurate for grazing transits
-- Uses Fisher information analysis to find correlation between parameters (there are 5 in the model: t_c (time of conjunction), tau (QUESTION: what exactly is tau on pg 2), T (total transit time?), delta (idk), and f_0 (unocculted flux)
-    - When you look at partial time derivative of each parameter, you can see that the model reflects the symmetry of the "real" behavior
-    - t_c is uncorrelated with the other params
-- Equation 20 is the covariance matrix for the piecewise function
-- Equation 21 is the covariance matrix for the piecewise function if we assume we have a great baseline of the unocculted flux f_0 so that f_0=1, making delta the fractional transit depth
-    - From this we can see that theta is the key controlling param, where theta = r/(1-b^2)
-
-
-% Ogilivie 2014: Tidal dissipation in stars and giant planets
-\cite{ogilvie2014tidal}
-
-- 
-
-% Winn 2010: Transits and Occultations
-\cite{winn2010transits}
-
-- 
-
-% TODO
-- Look more into line-of-sight acceleration
-- Should I fully understand the observatory information (example: IoIo info pg 3 of elisabeths' ppr)
-- What does it mean by observations were mostly taken in R?
-- Limb-darkening coefficients? (brought up in Adams and Jackson)
-- Composite times?
-- Rescaled delta BIC from Adams? Obviously this is important and something I will definitely need to touch on when discussing associated  mid-time errors in timing observations/processing sections 
-- What could a period increase mean?
-- Don't fully understand the 2 tests ran on pg 25 of adams
-- Don't fully understand the Q*' thing at the end (pg 25/26)
-- Stellar dissipation rate may be related to stellar luminosity?
+% % TODO
+% - Look more into line-of-sight acceleration
+% - Should I fully understand the observatory information (example: IoIo info pg 3 of elisabeths' ppr)
+% - What does it mean by observations were mostly taken in R?
+% - Limb-darkening coefficients? (brought up in Adams and Jackson)
+% - Composite times?
+% - Rescaled delta BIC from Adams? Obviously this is important and something I will definitely need to touch on when discussing associated  mid-time errors in timing observations/processing sections 
+% - What could a period increase mean?
+% - Don't fully understand the 2 tests ran on pg 25 of adams
+% - Don't fully understand the Q*' thing at the end (pg 25/26)
+% - Stellar dissipation rate may be related to stellar luminosity?
 
 \clearpage
 
