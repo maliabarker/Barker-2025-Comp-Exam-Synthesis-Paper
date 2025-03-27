@@ -304,11 +304,13 @@ Understanding the orbital evolution of UHJs is critical for constraining the lon
 
 \subsection{Mechanisms of Tidal Dissipation in Stars and Giant Planets}\label{sec:tidaldissipation}
 
-\subsubsection{Overview of Tidal Dissipation}
-Summarize the mechanisms of tidal dissipation in stars and giant planets, as discussed by Ogilvie (2014).
+<TODO: Write some sort of section intro here>
 
-\subsubsection{Application to UHJ Systems}
-Discuss how these mechanisms apply to UHJs, considering their close proximity to host stars and the resulting strong tidal forces.
+% \subsubsection{Overview of Tidal Dissipation}
+% Summarize the mechanisms of tidal dissipation in stars and giant planets, as discussed by Ogilvie (2014).
+
+% \subsubsection{Application to UHJ Systems}
+% Discuss how these mechanisms apply to UHJs, considering their close proximity to host stars and the resulting strong tidal forces.
 
 \begin{figure}[htbp]
     \centering
@@ -317,13 +319,13 @@ Discuss how these mechanisms apply to UHJs, considering their close proximity to
     \label{fig:ogilvie-fig1}
 \end{figure}
 
-The tidal potential, which describes the gravitational influence one body exerts on another, is typically expanded into multipole moments using spherical harmonics. The simplest case, the monopole moment ($l = 0$), treats the body as a point mass, assuming all its mass is concentrated at a single point. This approximation is useful for the gravitational interaction at a large scale but does not account for the internal structure of the body. A more detailed description of bodies with irregular shapes, such as those affected by tidal forces, requires the quadrupole moment ($l = 2$). The quadrupole moment accounts for the body's deviation from spherical symmetry, as seen in stars or ultra-hot Jupiters (UHJs), which develop tidal bulges due to their proximity to another massive body.
+The tidal potential, which describes the gravitational influence one body exerts on another, is typically expanded into multipole moments using spherical harmonics. The simplest case, the monopole moment ($l = 0$), treats the body as a point mass, assuming all its mass is concentrated at a single point. This approximation is useful for the gravitational interaction at a large scale but does not account for the internal structure of the body. A more detailed description of bodies with irregular shapes, such as those affected by tidal forces, requires the quadrupole moment ($l = 2$). The quadrupole moment accounts for the body's deviation from spherical symmetry, as seen in stars or ultra-hot Jupiters (UHJs) that develop tidal bulges due to their proximity to eachother.
 
 % Figure \ref{fig:ogilvie-fig1} illustrates the interaction between a UHJ and its host star, where the star is treated as a monopole and the planet as a quadrupole. The tidal bulge raised on the planet due to the star’s gravity is misaligned with the axis connecting the two bodies, leading to tidal forces that transfer angular momentum and dissipate energy. Over time, these forces can drive the system toward tidal locking, where the planet’s rotation period synchronizes with its orbital period, causing one hemisphere to always face the host star.
 
-Figure \ref{fig:ogilvie-fig1} illustrates the interaction between two bodies, where body 1 is treated as a quadropole with a tidal bulge raised on it by body 2, which is treated as a monopole. In Figure \ref{fig:ogilvie-fig1}, the tidal bulge and body 2 are aligned in the orbital plane. However, in reality, the tidal bulge raised on body 1 is misaligned with the axis connecting the two bodies, leading to tidal forces that transfer angular momentum and dissipate energy. 
+Figure \ref{fig:ogilvie-fig1} illustrates the interaction between two bodies, where body 1 is treated as a quadropole with a tidal bulge raised on it by body 2, which is treated as a monopole. In Figure \ref{fig:ogilvie-fig1}, the tidal bulge and body 2 are aligned in the orbital plane. However, in reality, the tidal bulge raised on body 1 is misaligned with the axis connecting the two bodies, leading to tidal forces that transfer angular momentum and dissipate energy \citep{ogilvie2014tidal}.
 
-Over time, the misalignment of the tidal bulge raised on a UHJ and the star's rotation can drive the planet toward tidal locking, where the rotation period of the planet synchronizes with its orbital period, causing one hemisphere to always face its host star. For example, HAT-P-7 \citep{helling2019understanding} exhibits significant temperature differences on its day and night sides, indicative of tidal locking. The misalignment of the tidal bulge raised on the host star and orbital period of the planet can also lead to transfer of angular momentum from the planet's orbital angular momentum to the star's spin angular momentum, resulting in tidal decay.
+In a UHJ system, both the planet and the star raise tidal bulges on each other. Over time, the misalignment of the UHJ's tidal bulge and the star's rotation can drive the planet toward tidal locking, where the rotation period of the planet synchronizes with its orbital period, causing one hemisphere to always face its host star. For example, HAT-P-7 \citep{helling2019understanding} exhibits significant temperature differences on its day and night sides, indicative of tidal locking. The misalignment of the host star's tidal bulge and the planet's orbital period leads to a transfer of angular momentum from the planet's orbital angular momentum to the star's spin angular momentum, resulting in tidal decay.
 
 % Tidal interactions typically involve the monopole moment of one body and the quadrupole moment of the other \citep{ogilvie2014tidal}. As illustrated in Figure \ref{fig:ogilvie-fig1}, we can model the interaction between a UHJ and its host star by treating the star as a monopole (a point mass) and the planet as a quadrupole, since the star’s gravity raises a tidal bulge on the planet. While simplified in the figure, this bulge is not perfectly aligned with the axis connecting the two bodies; instead, it is slightly offset. This misalignment induces tidal forces that transfer angular momentum and dissipate energy. Over time, these forces drive the system toward tidal locking, where the planet’s rotation period matches its orbital period, causing the same hemisphere to always face its host star.
 
@@ -391,7 +393,7 @@ The galactic engulfment rate scales with the tidal dissipation rate. So, if we c
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\linewidth]{figs/adams_fig11.jpg}
+    \includegraphics[width=0.85\linewidth]{figs/adams_fig11.jpg}
     \caption{Values of $Q^{'}_*$ based on observational and theoretical calculations. Red triangles are the $3\sigma$ lower limit (HOW WERE THESE CALCULATED). Systems with negative values for $\dot{P}$ (indicating decaying orbits) but insignificant detections ($<3\sigma$ detection WHAT DOES THIS MEAN??) have $Q^{'}_*$ values plotted as open blue circles. The two systems with negative, significant values of $\dot{P}$, WASP-12 b and TrES-1 b, have $Q^{'}_*$ values plotted as solid blue circles. The theoretical estimates of $Q^{'}_*$, calculated using system parameters and the grid from \citet{weinberg2023orbital}, are plotted as purple plus signs.}
     \label{fig:adams-fig11}
 \end{figure}
