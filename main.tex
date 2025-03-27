@@ -304,7 +304,7 @@ Understanding the orbital evolution of UHJs is critical for constraining the lon
 
 \subsection{Mechanisms of Tidal Dissipation in Stars and Giant Planets}\label{sec:tidaldissipation}
 
-<TODO: Write some sort of section intro here>
+Tidal dissipation is the transfer of energy and angular momentum from one body to another due to tidal forces. Where tidal dissipation occurs plays a role in shaping orbital evolution of an extrasolar system. Dissipation within the planet primarily drives tidal circularization, smoothing out orbital eccentricities, such as in the process of a warm Jupiter becoming a hot Jupiter. Meanwhile, dissipation within the star facilitates angular momentum transfer from the planetary orbit to the stellar spin, leading to tidal decay. Understanding these mechanisms is key to predicting the long-term fate of UHJs and their survival timescales. <maybe continue this lil intro?>
 
 % \subsubsection{Overview of Tidal Dissipation}
 % Summarize the mechanisms of tidal dissipation in stars and giant planets, as discussed by Ogilvie (2014).
@@ -314,7 +314,7 @@ Understanding the orbital evolution of UHJs is critical for constraining the lon
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\linewidth]{figs/ogilvie_fig1.png}
+    \includegraphics[width=0.8\linewidth]{figs/ogilvie_fig1.png}
     \caption{Figure 1 from \citet{ogilvie2014tidal} illustrates the geometry of tidal interactions between two bodies. The spherical polar coordinates ($\theta$, r, and $\phi$, in green) represent the orbital planes, centered on body 1 with mean radius $R_1$ and mass $M_1$, and body 2 with mass $M_2$, separated by a distance $d$. The spin angular velocity vector, $\Omega_s$, and the orbital angular velocity vector, $\Omega_o$, are shown in red. The solid black line represents the ellipsoidal bulge raised on body 1 by body 2, while the dotted black line illustrates the unaltered, spherical shape of body 1.}
     \label{fig:ogilvie-fig1}
 \end{figure}
@@ -342,52 +342,93 @@ A static tide, corresponding to $n=0$ and $m=0$, represents a permanent, axisymm
 
 An eccentricity tide arises when the body follows an elliptical orbit. The amplitude $|A|$ of this tide is proportional to the orbital eccentricity $e$, causing periodic variations in the tidal forces as the body moves through its orbit at varying speeds. An obliquity tide is driven by a misalignment between the body’s spin axis and its orbital plane. The amplitude $|A|$ of this tide is proportional to the obliquity $i$, the angle of the body's tilt relative to its orbital plane, which introduces additional tidal components that vary with the tilt of the body.
 
-These different tidal components are critical for understanding the evolution of planetary systems, particularly in systems where tidal interactions play a significant role in the dynamics, such as those involving ultra-hot Jupiters and their host stars.
+These different tidal components are critical for understanding the intricate evolution of planetary systems, particularly in hot Jupiter systems where tidal interactions play a significant role in the dynamics.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\linewidth]{figs/ogilvie_fig2.png}
-    \caption{The vertical axis describes the tidal frequency in the fluid frame, which is the angular frequency measured in frame of reference rotating with the body ($\hat{\omega}$), divided by the body's spin frequency ($\Omega_s$). This tells us how the tidal forces compare to the body's own revolution about its axis. The horizontal axis is the orbital frequency ($\Omega_o$), which is the rate that body 1 rotates around body 2, divided by the spin frequency ($\Omega_s$), which is the rate that body 1 spins about its axis. This tells us how fast the body is orbiting compared to its spin. The body reaches a synchronous state at $\frac{\Omega_o}{\Omega_s} = 1$, which is indicated by the dashed vertical line. 
-    Each colored line represents a different set of quadrupolar components of the tidal potential found in Table \ref{fig:ogilvie-tbl1}, labeled by $l, m, n$. Each line has slope $n$, which is the temporal harmonic index, or the time-dependent components of the quadrupolar components, and y-intercept $-m$, which is the order of spherical harmonic, which determines the longitudinal structure of the tide.
+    \caption{Tidal forcing frequencies for quadrupolar tidal components listed in Table \ref{fig:ogilvie-tbl1}. 
+    The vertical axis describes the tidal frequency in the fluid frame, which is the angular frequency measured in frame of reference rotating with the body ($\hat{\omega}$), divided by the body's spin frequency ($\Omega_s$). This tells us how the tidal forces compare to the body's own revolution about its axis. 
+    The horizontal axis is the orbital frequency ($\Omega_o$), which is the rate that body 1 rotates around body 2, divided by the spin frequency ($\Omega_s$), which is the rate that body 1 spins about its axis. This tells us how fast the body is orbiting compared to its spin. The dashed vertical line at $\frac{\Omega_o}{\Omega_s} = 1$ indicates alignment of the orbital and spin frequencies (e.g., tidal locking). 
+    Each colored line, labeled by a set of quadrupolar components from Table \ref{fig:ogilvie-tbl1}, has slope $n$ and y-intercept $-m$.
     Dotted lines indicate the frequency at which inertial waves can be excited inside the rotating body.}
     \label{fig:ogilvie-fig2}
 \end{figure}
 
 Figure \ref{fig:ogilvie-fig2} visualizes the seven sets of quadrupolar tidal components listed in Table \ref{fig:ogilvie-tbl1}, providing a comprehensive view of the different types of tidal interactions.
 
-TODO: find a good transition here!
+The dashed vertical line in Figure \ref{fig:ogilvie-fig2} represents orbit and spin angular momenta alignment. As an example, let's assume an asynchronous tide in a hot Jupiter, which plays a role in energy dissipation early in a hot Jupiter's evolution, indicated by the yellow line labeled by $2, 2, 2$. When the tide reaches the synchronous state at $\frac{\Omega_o}{\Omega_s} = 1$, then $\frac{\hat{\omega}}{\Omega_s} = 0$, meaning the tidal bluge stops osciallating within the planet. This describes the mechanism of tidal locking, when the tidal bulge of the planet permanently faces the star once the spin and orbital frequencies align. Once in a tidally locked state, this mode no longer plays a role in energy dissipation in the planet (although other modes, especially those raised in the star, will). As previously mentioned, most hot Jupiters follow this track and once they enter the UHJ region, are assumed to be tidally locked.
 
+Different tides may dominate at different times in a hot Jupiter's evolution. If the planet starts with a high orbital eccentricity, then eccentricity tides may dominate early on in an attempt to circularize the orbit, such as in a high-eccentricity migration scenario. If the planet is initially spinning very fast, then the asynchronous tide may act to slow the rotation and align with the orbit (as mentioned above). If the planet is tilted on its rotational axis, then obliquity tides may act to realign the spin with its orbital plane. As a hot Jupiter moves through its evolution towards a UHJ with an aligned, tidally locked, and circular orbit, the static tide dominates, as seen by the red line in Figure \ref{fig:ogilvie-fig2}.
+
+The dotted horizontal lines in Figure \ref{fig:ogilvie-fig2} represent the range of frequencies at which inertial waves can be excited inside a rotating body, defined by the condition $|\frac{\hat{\omega}}{\Omega_s}| < 2$. Notably, all seven sets of tidal components in the figure fall within this range, indicating that inertial wave excitation is relevant for all these modes.
+
+Inertial waves arise due to the Coriolis force, which acts on fluids moving within a rotating system, causing them to be deflected (fun fact: this is why hurricanes spin in opposite directions in different hemispheres on Earth). In a fully convective body, such as a star, these waves can freely propagate. When a tidal component’s frequency ($\frac{\hat{\omega}}{\Omega_s}$, the y-axis) falls within the inertial wave regime (marked by the dotted horizontal lines in Figure \ref{fig:ogilvie-fig2}), it can resonate with fluid motions inside the planet, significantly enhancing tidal dissipation \citep{ogilvie2014tidal}. This mechanism may explain the high tidal dissipation rates observed in UHJ systems, which play a crucial role in their orbital evolution and eventual fate.
+
+Inertial waves may also propagate in planets differently depending on their internal structure. \citet{ogilvie2014tidal} discusses how larger cores and greater density contrasts between layers lead to stronger inertial wave-driven tidal dissipation. This has implications for different UHJ formation scenarios. If UHJs form in-situ, they are expected to have massive cores ($\geq$ 10 Earth masses) \citep{fortney2021hotjupiters}, \citep{dawson2018origins}, leading to enhanced tidal dissipation, and may explain how these planets moved into their orbital ranges so quickly.
+
+% Explaining angular momentum
 Over time, tidal forces drive a system toward tidal equilibrium, in which both bodies achieve aligned, synchronous rotation and a circular orbit, and there is no further transfer of angular momentum. However, in systems with large mass differences, such as UHJ systems, this equilibrium may not be possible because the total angular momentum of the system is insufficient.
 
 The total angular momentum of a system is the sum of orbital angular momentum ($L_o$)–the angular momentum associated with the planet's orbit around its host star—and the spin angular momentum ($L_s$)–the angular momentum from the planet’s rotation about its own axis.
 For tidal equilibrium to be reached, the total angular momentum ($L = L_o + L_s$) must exceed a critical threshold ($L_c$). If $L < L_c$, the system continues evolving instead of settling into a stable state.
 
-In extreme mass ratio systems, the smaller body contributes very little spin angular momentum because its moment of inertia is small. As a result, the total angular momentum is much lower than in systems with two similar-mass bodies (such as binary stars), where both contribute significant spin angular momentum. If the system cannot reach equilibrium, tidal interactions continue to transfer angular momentum between the planet’s orbit and the star’s spin. Over time, this exchange causes the planet’s orbit to decay, ultimately leading to orbital inspiral and destruction as the planet is pulled into its host star.
+In extreme mass ratio systems, the smaller body contributes very little spin angular momentum because its moment of inertia is small. As a result, the total angular momentum is much lower than in systems with two similar-mass bodies (such as binary stars), where both contribute significant spin angular momentum. If the system cannot reach equilibrium, tidal interactions continue to transfer angular momentum between the planet’s orbit and the star’s spin, causing the planet’s orbit to decay.
 
 % In circular orbits, rotation speed matches orbit and the spin axis aligns to straight-up direction relative to the orbital plane. However, in eccentric orbits, the tidal forces are strongest at the pericenter, so the spin usually synchs at the fastest part of the orbit, entering a state of psuedo-synchronization. If we consider the warm to hot jupiter theory represented in \citep{fortney2021hotjupiters} and \citep{dawson2018origins}, if we start with an eccentric orbit, then the planet will enter pseudo-synchronization 
-
-% INTERPRETING FIG \ref{fig:ogilvie-fig2}
-
-The Coriolis force (EXPLAIN) can give rise to inertial waves in a rotating body. If a full sphere is fully convective, such as a star, then inertial waves can propagate. Tidal response (explain) of inertial waves increase with the spin frequency of the rotating body, meaning bodies that spin faster have higher tidal responses and higher rates of tidal dissipation. Larger cores or greater density contrasts between layers lead to stronger tidal responses in inertial waves. (idk how this exactly ties into UHJS)
-
-Based on the formation theories, the inertial waves may differ greatly. If it is the in-situ formation, there is a theorized minimum 10 earth mass core, which is fairly large and therefore has higher tidal dissipation rates. 
-
-These are important because tidal dissipation rate depends heavily on the frequency of these waves. When tidal component frequency (y-axis) falls within the range of inertial waves (dotted horizontal lines), the mode can interact with fluid motions and enhance tidal dissipation. The presence of strong tidal interactions when internal waves are excited may explain the high tidal dissipation rates we see in UHJ systems.
-
-Dissipation rates within the planet can explain tidal circularization, while dissipation rates within the star can explain transfer of angular momentum and orbital decay.
-
-When the orbital and spin angular frequencies of a body are equal to one another, they reach a synchronous state in which the body is orbiting at the same rate that it is spinning on its axis. This state is shown by the dashed vertical line in Figure \ref{fig:ogilvie-fig2}. This can influence the long-term tidal evolution HOW??
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\linewidth]{figs/ogilvie_fig10.png}
-    \caption{The evolutionary paths of a planet interacting with its host star (assuming a circularized orbit with $e=0$). The vertical axis shows the stellar spin angular frequency (in units of the critical angular velocity, $\Omega_c$, which is associated with the critical angular momentum, $L_c$, which is the angular momentum needed to reach tidal equilibrium). The horizontal axis shows the stellar orbital angular velocity (also in units of critical angular velocity $\Omega_c$). The solid lines are contours of the total angular momentum $L$. The dashed line represents the stellar synchronized state, when the spin and orbital angular frequencies are equal. Black points are moments of tidal equilibrium, when $L \geq L_c$. If tidal equilibrium is not reached, when $L < L_c$, then the planet heads towards destruction.}
+    \caption{The tidal evolution of a planet-star system (assuming a circularized orbit with $e=0$). The vertical axis shows the stellar spin angular velocity (in units of the critical angular velocity, $\Omega_c$, which is associated with the critical angular momentum, $L_c$). The horizontal axis shows the planetary orbital angular velocity (also in units of critical angular velocity $\Omega_c$). The solid lines are contours of the total angular momentum of the system $L$, with arrows pointing in the direction of evolution such that energy is dissipated. The dashed line represents when the stellar spin and planetary orbit are synchronized. Black points are moments of tidal equilibrium, when $L \geq L_c$.}
     \label{fig:ogilvie-fig10}
 \end{figure}
 
-If the total angular momentum, $L$, is less than the critical value $L_c$, then the orbital angular momentum of the planet is turned into stellar spin angular momentum, leading to a decaying orbit and stellar spin-up. 
+Figure \ref{fig:ogilvie-fig10} shows different trajectories of a planet tidally interacting with its host star, based on the total angular momentum of the system in terms of the critical angular momentum ($\frac{L}{L_c}$), assuming the orbit is circularized such as in a UHJ system. 
 
-When looking at binary star recircularization, we find a tidal dissipation rate $Q^{'}_{*}$ of $10^6$. However, if we assume this rate for UHJ systems, we get unrealisticly short orbital decay timescales. As seen in JACKSON PAPER, ADAMS PAPER (maybe use adams table 8), if we assume a constant value of $Q^{'}_{*}$, we get the following theoretical dP/dE, which differs from the observed dP/dE. This shows that we cannot assume this value, and that it is instead dependent on things such as stellar structure blah blah. 
+If the system's angular momentum $L$ is greater than or equal to the critical angular momentum, $L_c$, then the system can stay in equilibrium for a long time. Points of equilibrium are represented by the black dots in Figure \ref{fig:ogilvie-fig10}. The system tends to move towards tidal equilibrium (black dots) and synchronization (dashed line), as seen by the directional arrows on the contour lines. 
+
+Above the synchronization line, there is more spin angular momentum, and the star spins down as the system attempts to dissipate energy. Below this line, there is more orbital angular momentum, and tidal equilibrium is not reached ($L < L_c$). In this scenario, the system continuously transfers angular momentum from the orbit to the spin, resulting in a shrinking orbit period and stellar spin-up. This is tidal decay.
+
+<some transition into talking about energy dissipation and tidal quality factor>
+
+% Q* explanation 
+
+The tidal quality factor $Q_*$ is a dimensionless, non-literal parameterization of the tidal response that represents how efficiently the system dissipates tidal energy \citep{ogilvie2014tidal}. While $Q_*$ is commonly used in theoretical settings, it is hard to directly measure. Instead, a more commonly used metric is the modified tidal quality factor $Q_*' = \frac{Q_*}{k_2}$ \citep{patel2022constraining}, where $Q_*$ is the tidal quality factor and $k_2$ is the Love number, which measures how a body deforms due to a tidal response. The modified tidal quality factor accounts for the deformation of a body, making it easier to measure from observations of tidal effects. A larger value of $Q'_*$ means weaker dissipation, and a smaller value of $Q'_*$ means stronger dissipation.
+
+The value of $Q'_*$ depends on the tidal frequency and the different quadrupolar components of the spherical harmonics $l$ and $m$, meaning the value of $Q'_*$ differs with internal structure of the body \citep{ogilvie2014tidal}. For example, when looking at binary star recircularization, we find $Q^{'}_{*} \approx 10^6$ \citep{ogilvie2007tidal}. However, in UHJ systems, this value can vary greatly, with WASP-12 having $Q^{'}_{*} = 1.8 \times 10^5$ \citep{yee2019orbit}.
+
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{c|c}
+         &  \\
+         & 
+    \end{tabular}
+    \caption{Caption}
+    \label{tab:my_label}
+\end{table}
+
+Many statistical models have previously assumed a constant value of $Q^{'}_{*}$ (see Section \ref{sec:models} for an in-depth review of these models and assumptions). However, this may decrease model accuracy significantly, as the value of $Q^{'}_{*}$ depends intricately on stellar age, mass, and internal structure. For example, in Table \ref{}, \citet{adams2024doomed} show the observed change in orbital period and the theoretically calculated change in orbital period if the value of $Q'_*$ is assumed to be equal to WASP-12 b. In the four systems shown, we see drastic differences, showing that it is not feasible to predict a constant value for $Q'_*$. 
+
+However, one big issue with this is that it is fairly difficult to measure the value of $Q'_*$ without also making other assumptions in the observations. One way to mitigate this issue is to attempt to model the internal structure and interactions within host stars and predict the value of $Q'_*$ in this way. \citet{weinberg2023orbital} created non-linear models to develop an interpolable grid of $Q'_*$ values based on stellar parameters such as mass and age. Using this grid and system parameters, \citet{adams2024doomed} found theoretical values for a handful of extrasolar systems and compared them to $Q'_*$ values based on observations. These results are plotted in Figure \ref{fig:adams-fig11}.
+
+For example, in Figure \ref{fig:adams-fig11}, \citet{adams2024doomed} plot the values of $log_{10}Q^{'}_{*}$ depending on actual observed parameters (seen by the blue circles) and theorized models created by \citet{weinberg2023orbital} (seen by the purple plus signs).
+
+The approximation of $Q'_*$ from \citet{goldreich1966q}:
+
+\begin{equation}
+    Q'_* = - \left( \frac{27 \pi}{2} \right ) \left( \frac{dP}{dt} \right )^{-1} \left( \frac{M_p}{M_s} \right ) \left( \frac{a}{R_*} \right )^{-5}
+\end{equation}
+
+shows that $Q'_*$ is inversely proportional to the rate of orbital period change \citep{adams2024doomed}. Using this approximation, \citet{adams2024doomed} calculated the value of $Q'_*$ based on the observed orbital period rate of change, and the theoretical value of $Q'_*$ based on the 
+
+
+
+
+
+
+However, if we assume this rate for UHJ systems, we get unrealisticly short orbital decay timescales. As seen in JACKSON PAPER, ADAMS PAPER (maybe use adams table 8), if we assume a constant value of $Q^{'}_{*}$, we get the following theoretical dP/dE, which differs from the observed dP/dE. This shows that we cannot assume this value, and that it is instead dependent on things such as stellar structure blah blah. 
 
 The galactic engulfment rate scales with the tidal dissipation rate. So, if we can constrain the tidal dissipation rate, then we can constrain the galactic engulfment rate and have a rough estimate of how many merger events occur in our galaxy each year. BUT WHAT IF THE TIDAL DISSIPATION RATE IS NOT THE SAME FOR EACH SYSTEM??? 
 
@@ -588,7 +629,7 @@ In \ref{fig:adams-fig4}, the data points highlighted by red diamonds have very s
 \clearpage
 
 
-\subsection{Analytical Models \& Metrics for Optimizing Searches for Tidally Decaying Exoplanets}
+\subsection{Analytical Models \& Metrics for Optimizing Searches for Tidally Decaying Exoplanets}\label{sec:models}
 
 \subsubsection{Analytical Models \& Proposed Metrics}
 % Discuss the analytical approximations for transit light-curve observables presented by Carter et al. (2008).
