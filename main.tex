@@ -512,39 +512,57 @@ Some observatories, both space and ground-based, are limited in their observatio
 
 On the other hand, space-based missions like NASA's Transiting Exoplanet Survey Satellite (TESS) continually observe different sectors of the sky. TESS collects stellar flux data from a different part of the sky about every month, making it an invaluable resource for exoplanet research. Future ground-based missions, such as the Vera C. Rubin Observatory, will scan the sky nightly with the largest camera ever built, generating massive amounts of data. While this data will be publicly available, processing and storing such an enormous volume of information will present significant challenges, likely requiring advanced data processing pipelines.
 
-There is also a rise in the use of personal telescopes, often referred to as amateur or citizen astronomy. For example, the collaboration between Unistellar and the Search for Extraterrestrial Intelligence (SETI) Institute has supported citizen astronomers in collecting transit observations and contributing them to publicly accessible databases. The recent confirmation of the TESS object of interest TIC 393818343 b through citizen astronomer observations made with Unistellar telescopes \citep{sgro2024confirmation} demonstrates the value of such data. This is particularly true for studying the orbital evolution of hot Jupiters, as long-term observations are necessary to detect the subtle orbital changes indicative of tidal decay.
+There is also a rise in the use of personal telescopes, often referred to as amateur or citizen astronomy. For example, the collaboration between Unistellar and the Search for Extraterrestrial Intelligence (SETI) Institute has supported citizen astronomers in collecting transit observations and contributing them to publicly accessible databases \citep{peluso2023unistellar}. The recent confirmation of the TESS object of interest TIC 393818343 b through citizen astronomer observations made with Unistellar telescopes \citep{sgro2024confirmation} demonstrates the value of such data. This is particularly true for studying the orbital evolution of hot Jupiters, as long-term observations are necessary to detect the subtle orbital changes indicative of tidal decay.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\linewidth]{figs/winn_fig8.png}
-    \caption{Comparison of ground-based observations (left) vs. space-based observations (right) of transit light curves. In the top right panel, the bump in the transit light curve is theorized to be the covering of a solar dark spot by the transiting planet. This is a great example of detail from space-based observations that you cannot get from ground-based observations.}
+    \caption{Comparison of ground-based observations (left) vs. space-based observations (right) of transit light curves.}
     \label{fig:winn-fig8}
 \end{figure}
 
-While ground-based observations are becoming increasingly popular, especially with support from citizen scientists, challenges remain. Earth's atmosphere can introduce noise into photometric observations, especially in the presence of clouds or atmospheric pollution. Additionally, the deflection or absorption of certain wavelengths by the atmosphere can make ground-based spectroscopic observations nearly impossible. Figure \ref{fig:winn-fig8} shows a comparison between ground-based and space-based transit light curves. Although the general patterns are similar, precise measurements of transits and midtimes are necessary to track orbital changes, especially for studying tidal decay. While it is entirely possible to use ground-based observations to track orbital changes, more precise measurements help mitigate errors and improve data interpretation. Some of these issues are explored further in the following subsection.
+While ground-based observations are becoming increasingly popular, especially with support from citizen scientists, challenges remain. Earth's atmosphere can introduce noise into photometric observations, especially in the presence of clouds or atmospheric pollution. Additionally, the deflection or absorption of certain wavelengths by the atmosphere can make ground-based spectroscopic observations nearly impossible. Figure \ref{fig:winn-fig8} shows a comparison between ground-based and space-based transit light curves. Although the general patterns are similar, precise measurements of transits and midtimes are necessary to track orbital changes, especially for studying tidal decay. While it is entirely possible to use ground-based observations to track orbital changes, more precise measurements help mitigate errors and improve data interpretation.
+
+Additionally, some systems have extremely dim stars or very small transit signals that cannot be detected well enough by ground-based observatories. These systems, such as Kepler-1658 b, show historical tendencies towards possible orbital evolution, but require observation by space-based observatories \citep{adams2024doomed}. Some of these issues are explored further in the following subsection.
 
 Both ground- and space-based observations are invaluable for exoplanet research. Space-based observations, while harder to access or more challenging in terms of data processing, offer high precision, making them ideal for long-term studies of orbital periods in ultra-hot Jupiter (UHJ) systems. However, the growing community of citizen scientists has dramatically increased the volume of ground-based observations. While maintaining consistency in observations is crucial, the trade-off between the quality and quantity of data is discussed in Section \ref{sec:models}. Ultimately, both types of observations contribute significantly to our understanding of exoplanetary systems.
 
-\subsubsection{Challenges in Maintaining Proper Data Collected Practices}
-%  This will mostly cover Elisabeth's paper
+\subsubsection{Challenges in Maintaining Proper Data Collection Practices}
 
-% % Adams 2024: Doomed Worlds I. No new evidence for orbital decay in a long-term survey of 43 ultra-hot Jupiters
-% \cite{adams2024doomed}
+% With increasing observations over time, many now reaching the decade mark, it has become easier to identify trends in the data. However, some systems with limited observations over the years often require additional data to rule out various phenomena. It is crucial to account for tidal decay by considering alternative explanations, such as apsidal precession, the effects of companion objects, and line-of-sight acceleration.
 
-% - UHJs (<3 day orb per) usually occur around younger stars, maybe because something happens to these planets over longer periods of time. This could be planetary engulfment (while stars are still on MS). 
-% - Q*' gives us estimated planetary engulfment rates, but this is not constrained well. Incorporating NON-linear dissipation (THIS ALSO COMES UP IN OGLIVIE PAPER) has given us a better range depending on stellar age and mass, could be key. 
+With observations of hot Jupiters increasing over time, many now even reaching the decade mark, it has become easier to identify trends in the midtime data indicative of tidal decay. Because changes in orbital period are very small (on the scale of milli-second per Earth year), detecting timing signatures in exoplanet systems demands highly precise timing analysis. Several issues in the timing data can arise in this process, including duplicate times, composite times, and false timing conversions \citep{adams2024doomed}. 
+
+Duplicate times occur when the same observation is recorded twice in a dataset, making the observation at this point twice as significant when processed. These can significantly impact data accuracy, especially when they occur at critical points or when errors are small. These errors are easily avoidable with proper data maintenance. 
+
+To mitigate errors caused by the Earth's motion around the Sun and the Sun's motion around the solar system barycenter, a dynamical timing system is necessary to avoid cyclical variations in astronomical time series. This is why we use the Barycentric Julian Date (BJD) TDB timing system and scale. Historically, the Heliocentric Julian Date (HJD) was more commonly used because it is easier to calculate. Although one could argue that using HJD or BJD does not significantly impact most observations—since the difference is about one second and most transit observations do not have the accuracy to be affected—there is an important distinction between the two. HJD is typically based on the UTC time scale, while BJD is based on the TDB time scale, and the difference between these scales is approximately 64.184 seconds (as of 2024), with this offset changing as leap seconds are added. For this reason, it is crucial to report both the timing system and time scale used in any data analysis, as they are not always explicitly stated and are often assumed to be associated (UTC with HJD, TDB with BJD).
+
+Composite times, which are derived from multiple light curves, also present several challenges. The error bars on composite times are typically much smaller because of this consolidation of timing information into a single point. Smaller error bars skew model fits (see Section \ref{sec:models} for further explanation of this process), resulting in possible false detections of decreasing orbital periods. Composite times can also obscure the original data source, making it harder to identify potential timing errors and may lead to double-counting transits.
+
+Composites are often used in cases such as stacked light curves, where transits from multiple observations are combined to reduce noise and improve detection. This is common in ground-based surveys where detecting a single transit is difficult. Another example is when midtimes are reported for composite data, anchoring all combined transits into one observation. This approach results in a specific (and usually small) error for the mid-time. Weighted average times are another example, where two mid-times from different sources are averaged together. This makes it challenging to deconstruct the data and identify potential errors in the observations. An example of how composite mid-times can lead to issues is seen with CoRoT-2, where 82 transits were stacked. When unstacked, the original transits had errors that were 50\% larger, changing the delta BIC from 33 to -2, effectively ruling out tidal decay \citep{adams2024doomed}.
+
+<TODO: Write about uncertainties on timing data>
+
+To combat these problems, it is essential to identify the exact timing system used to prevent false conversions and ensure the original source of the data is clearly specified to avoid duplicates.
+
 % - With increasing observations over time (a lot now reaching the decade mark) it is easier to start learning trends in the data. However, some systems with limited observations over the years usually are ruled out with additional observations. It is also important to rule out tidal decay by looking at all the other options (apsidal precession, effects of companion objects, line of sight acceleration).
-% - BIC can help us find optimal observing campaigns because it is obviously important to know how often you need to observe to get optimal results. (THIS CAN TIE INTO BRIAN'S PAPER)
-% - Some systems, while they show strong evidence for tidal decay, are very difficult to observe from ground based observations and need space-based scopes or largest ground scopes (like Kelper-1658 b)
-% - Fitting light curves using pylight-curve which uses emcee (by dan). For this work, transit mid-time vals were not sensitive to chosen parameter values such as a/R* or limb-darkening coefficients. WHAT IF IT WAS?? 
+
 % - Detection of these timing signatures requires very precise timing analysis. Some issues that have come up with this are detecting duplicate times, composite times, and false timing conversion. This is why it is VERY important to identify exact timing system (to combat false timing conversion) and exact source of the original data (to combat duplicates). 
+
 % - Duplicates can have a large impact if it has low errors or occurs at critical point. They are source of error that can be completely eliminated with proper data maintenance.
+
 % - Composites (times derived from more than 1 light curve) can have the following issues: their error bars are usually much smaller because they compress all timing info into single point, they obscure original data source which makes it difficult to find potential timing errors, and can lead to double counting transits
+
 %      - Composited include the following: stacked light curves where transits from multiples epochs are stacked to actually see the transits, which is common in ground-based surveys where it is difficult to detect a single transit; when ephemeris mid-times are reported for composite data, this usually anchors all the combined transits into one reported epoch, which results in a very specific (small error) mid-time for one epoch and will weight the BIC equation; weighted average times are when two mid-times from different sources are averaged together, which makes it difficult to deconstruct this and look for errors in the observations
+     
 %      - Example of a composite mid-time is for CoRoT-2 where 82 transits were stacked and when unstacked, the original transits had 50 percent larger errors, which changed delta BIC from 33 to -2 (pretty much ruling out tidal decay)
+     
 % - Timing systems: 
+
 %     - to remove the motion of the earth around the sun and the motion of the sun around the solar system barycenter, we must use a dynamical timing system to avoid cyclical variations in astronomical time series. This is why we use BJD TDB timing system and scale (respectively). 
+    
 %     - Historically, helicentric julian date HJD is much easier to calculate and this has been preferred over BJD, and one can argue that using one or the other doesn't have much significance as the difference is only about 1 second and most transit observations do not have the accuracy within this range to be affected. However, HJD is usually in UTC time scale while BJD is usually in TDB timescale. This difference is about 64.184 seconds as of 2024 (this offset changes with addition of leap seconds). This is why it is very important to also report the time SCALE as well as the system, which isn't always reported and more often than not assumed to be associated (UTC with HJD, TDB with BJD). 
+
 % - Running models: fit to linear and quadratic models, calculated delta BIC, ran omit-one delta BIC test, calculated a rescaled delta BIC, investigated outliers that failed the omit one test and re-ran everything again with corrected data
 % - Timing Analysis: 
 %     - WASP-12 b: still looking good
@@ -554,17 +572,18 @@ Both ground- and space-based observations are invaluable for exoplanet research.
 %     - WASP-46 b: Has good data, lots of scatter in data before 2015 with 7 outlier points, removing these points changes delta BIC from 32-149, and when rescaled changes to 2, flagged for reanalysis
 %     - TrES-1 b: good baseline of data and no obvious timing errors, has siginifgant positive delta BIC (69) HOWEVER, the Q*' value is five orders of magnitude lower than what we expect for the decay rate, so the decay is most likely caused by something else
 %     - Kepler-1658 b: has a very shallow transit depth, so hard to observe with ground-based telescopes. rapidly decaying and star is evolved off MS, weinburg says g-mode does not explain rapid decay but vissapragada says could be inertial wave dissipation and rapid stellar rotation. confirmation could be possible with a few more observations, so withing a year or two
+
+
 % - Answering the question: was WASP-12 b the first world to have detected tidal decay because it had enough transits observed OR is there something special about the WASP-12 b system?
 %     - Test 1: Sets all planet's decay rates to WASP-12 b decay rate and sees what the delta BIC would be given the number of observations each system has. Shows that nearly half of the systems would have has delta BIC > 30 (in reality only 1 did) and 4 systems would have had 10x larger delta BICS than WASP-12b
 %     - Test 2: Sets Q*' (tidal dissipation factor) to be the same for all systems and calculated the decay rate for each system. seven planets had value >= 3x the observed error in the decay rate
 %     - Overall, for 20 of the systems, there is evidence that we should have detected tidal decay but we have not
-% - Calculated values of Q*' (tidal dissipation factor) and tau (estimate decay timescale). Q*' is inversely proportional to rate of period change. 
-% - Weinberg 2024 has table of Q*' based on stellar age and mass that can be interpolated. Stellar models with radiative cores and convective envelopes usually have smaller values than higher mass MS stars with convective cores. If highmass stars are not on the MS, then they no longer have a convective (instead, radiative) core and the Q*' value drops again. CAN TIE THIS INTO OGLIVIE PAPER
+
+
 % - CONCLUSIONS: 
 %     - For the two systems where orbital decay is likely (WASP-12 b and Kepler-1658 b), their host stars may have evolved off the MS which would offer explanation for rapid decay and maybe point towards evidence that a star needs to be evolved off the MS to exhibit decay (QUESTION: but then what does that say about the observation that most UHJ are around young stars?)
 %     - delta BIC values below 30-50 should be tentative because of usual timing data errors, especially in the estimation of timing uncertainties
 %     - systems need to be observed at least once a year
-
 
 \begin{figure}[htbp]
     \centering
