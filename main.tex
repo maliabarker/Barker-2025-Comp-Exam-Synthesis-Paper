@@ -301,16 +301,9 @@ Understanding the orbital evolution of UHJs is critical for constraining the lon
 \clearpage
 
 
-
 \subsection{Mechanisms of Tidal Dissipation in Stars and Giant Planets}\label{sec:tidaldissipation}
 
-Tidal dissipation is the transfer of energy and angular momentum from one body to another due to tidal forces. Where tidal dissipation occurs plays a role in shaping orbital evolution of an extrasolar system. Dissipation within the planet primarily drives tidal circularization, smoothing out orbital eccentricities, such as in the process of a warm Jupiter becoming a hot Jupiter. Meanwhile, dissipation within the star facilitates angular momentum transfer from the planetary orbit to the stellar spin, leading to tidal decay. Understanding these mechanisms is key to predicting the long-term fate of UHJs and their survival timescales. <maybe continue this lil intro?>
-
-% \subsubsection{Overview of Tidal Dissipation}
-% Summarize the mechanisms of tidal dissipation in stars and giant planets, as discussed by Ogilvie (2014).
-
-% \subsubsection{Application to UHJ Systems}
-% Discuss how these mechanisms apply to UHJs, considering their close proximity to host stars and the resulting strong tidal forces.
+Tidal dissipation is the transfer of energy and angular momentum from one body to another due to tidal forces. Where tidal dissipation occurs plays a role in shaping orbital evolution of an extrasolar system. Dissipation within the planet primarily drives tidal circularization, smoothing out orbital eccentricities, such as in the process of a warm Jupiter becoming a hot Jupiter. Meanwhile, dissipation within the star facilitates angular momentum transfer from the planetary orbit to the stellar spin, leading to tidal decay. Understanding these mechanisms is key to predicting the long-term fate of UHJs and their survival timescales.
 
 \begin{figure}[htbp]
     \centering
@@ -321,22 +314,18 @@ Tidal dissipation is the transfer of energy and angular momentum from one body t
 
 The tidal potential, which describes the gravitational influence one body exerts on another, is typically expanded into multipole moments using spherical harmonics. The simplest case, the monopole moment ($l = 0$), treats the body as a point mass, assuming all its mass is concentrated at a single point. This approximation is useful for the gravitational interaction at a large scale but does not account for the internal structure of the body. A more detailed description of bodies with irregular shapes, such as those affected by tidal forces, requires the quadrupole moment ($l = 2$). The quadrupole moment accounts for the body's deviation from spherical symmetry, as seen in stars or ultra-hot Jupiters (UHJs) that develop tidal bulges due to their proximity to eachother.
 
-% Figure \ref{fig:ogilvie-fig1} illustrates the interaction between a UHJ and its host star, where the star is treated as a monopole and the planet as a quadrupole. The tidal bulge raised on the planet due to the star’s gravity is misaligned with the axis connecting the two bodies, leading to tidal forces that transfer angular momentum and dissipate energy. Over time, these forces can drive the system toward tidal locking, where the planet’s rotation period synchronizes with its orbital period, causing one hemisphere to always face the host star.
-
 Figure \ref{fig:ogilvie-fig1} illustrates the interaction between two bodies, where body 1 is treated as a quadropole with a tidal bulge raised on it by body 2, which is treated as a monopole. In Figure \ref{fig:ogilvie-fig1}, the tidal bulge and body 2 are aligned in the orbital plane. However, in reality, the tidal bulge raised on body 1 is misaligned with the axis connecting the two bodies, leading to tidal forces that transfer angular momentum and dissipate energy \citep{ogilvie2014tidal}.
 
 In a UHJ system, both the planet and the star raise tidal bulges on each other. Over time, the misalignment of the UHJ's tidal bulge and the star's rotation can drive the planet toward tidal locking, where the rotation period of the planet synchronizes with its orbital period, causing one hemisphere to always face its host star. For example, HAT-P-7 \citep{helling2019understanding} exhibits significant temperature differences on its day and night sides, indicative of tidal locking. The misalignment of the host star's tidal bulge and the planet's orbital period leads to a transfer of angular momentum from the planet's orbital angular momentum to the star's spin angular momentum, resulting in tidal decay.
 
-% Tidal interactions typically involve the monopole moment of one body and the quadrupole moment of the other \citep{ogilvie2014tidal}. As illustrated in Figure \ref{fig:ogilvie-fig1}, we can model the interaction between a UHJ and its host star by treating the star as a monopole (a point mass) and the planet as a quadrupole, since the star’s gravity raises a tidal bulge on the planet. While simplified in the figure, this bulge is not perfectly aligned with the axis connecting the two bodies; instead, it is slightly offset. This misalignment induces tidal forces that transfer angular momentum and dissipate energy. Over time, these forces drive the system toward tidal locking, where the planet’s rotation period matches its orbital period, causing the same hemisphere to always face its host star.
-
-\begin{figure}[htbp]
+\begin{table}[htbp]
     \centering
     \includegraphics[width=\linewidth]{figs/ogilvie_tbl1.png}
-    \caption{Table 1 from \citep{ogilvie2014tidal} shows the quadrupolar components of the tidal potential. }
-    \label{fig:ogilvie-tbl1}
-\end{figure}
+    \caption{Table 1 from \citep{ogilvie2014tidal} shows the quadrupolar components of the tidal potential.}
+    \label{tab:ogilvie-tbl1}
+\end{table}
 
-The tidal potential can be broken down into several components, as detailed in Table \ref{fig:ogilvie-tbl1}. These include different contributions to the tidal interactions, characterized by the spherical harmonic order $l$ and the longitudinal structure of the bulge, represented by the index $m$. For instance, when $m = 0$, the tidal bulge is axisymmetric, while non-axisymmetric cases occur when $m = 1$ or $m = 2$. The time-dependence of the tidal deformation is captured by the index $n$, with $n = 0$ representing a static tide, and $n > 0$ indicating periodic oscillations due to orbital motion. The tidal amplitude, $|A|$, quantifies the strength of each tidal component, with various types of tides—such as static, asynchronous, eccentricity, and obliquity tides—arising under different conditions, further affecting the system’s evolution.
+The tidal potential can be broken down into several components, as detailed in Table \ref{tab:ogilvie-tbl1}. These include different contributions to the tidal interactions, characterized by the spherical harmonic order $l$ and the longitudinal structure of the bulge, represented by the index $m$. For instance, when $m = 0$, the tidal bulge is axisymmetric, while non-axisymmetric cases occur when $m = 1$ or $m = 2$. The time-dependence of the tidal deformation is captured by the index $n$, with $n = 0$ representing a static tide, and $n > 0$ indicating periodic oscillations due to orbital motion. The tidal amplitude, $|A|$, quantifies the strength of each tidal component, with various types of tides—such as static, asynchronous, eccentricity, and obliquity tides—arising under different conditions, further affecting the system’s evolution.
 
 A static tide, corresponding to $n=0$ and $m=0$, represents a permanent, axisymmetric tidal bulge that remains fixed relative to the body, producing a constant deformation. In contrast, an asynchronous tide, with $l=m=n=2$, occurs when the body’s spin is not synchronized with its orbit, causing the tidal bulge to become misaligned with the orbital motion.
 
@@ -347,15 +336,11 @@ These different tidal components are critical for understanding the intricate ev
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\linewidth]{figs/ogilvie_fig2.png}
-    \caption{Tidal forcing frequencies for quadrupolar tidal components listed in Table \ref{fig:ogilvie-tbl1}. 
-    The vertical axis describes the tidal frequency in the fluid frame, which is the angular frequency measured in frame of reference rotating with the body ($\hat{\omega}$), divided by the body's spin frequency ($\Omega_s$). This tells us how the tidal forces compare to the body's own revolution about its axis. 
-    The horizontal axis is the orbital frequency ($\Omega_o$), which is the rate that body 1 rotates around body 2, divided by the spin frequency ($\Omega_s$), which is the rate that body 1 spins about its axis. This tells us how fast the body is orbiting compared to its spin. The dashed vertical line at $\frac{\Omega_o}{\Omega_s} = 1$ indicates alignment of the orbital and spin frequencies (e.g., tidal locking). 
-    Each colored line, labeled by a set of quadrupolar components from Table \ref{fig:ogilvie-tbl1}, has slope $n$ and y-intercept $-m$.
-    Dotted lines indicate the frequency at which inertial waves can be excited inside the rotating body.}
+    \caption{Figure 2 from \citet{ogilvie2014tidal} depicts the tidal forcing frequencies for the quadrupolar tidal components listed in Table \ref{tab:ogilvie-tbl1}. The vertical axis represents the tidal frequency in the fluid frame, which is the angular frequency ($\hat{\omega}$) measured in a reference frame rotating with the body, normalized by the body’s spin frequency ($\Omega_s$). This ratio indicates how the tidal forces compare to the body’s own rotation. The horizontal axis shows the orbital frequency ($\Omega_o$), which is the rate at which body 1 orbits body 2, normalized by the spin frequency ($\Omega_s$). This axis illustrates the relative speed of the body’s orbit compared to its spin. The dashed vertical line at $\frac{\Omega_o}{\Omega_s} = 1$ represents the alignment of the orbital and spin frequencies (e.g., tidal locking). Each colored line, labeled by a set of quadrupolar components from Table \ref{tab:ogilvie-tbl1}, has a slope of $n$ and a y-intercept of $-m$. The dotted lines indicate the frequency range at which inertial waves can be excited within the rotating body.}
     \label{fig:ogilvie-fig2}
 \end{figure}
 
-Figure \ref{fig:ogilvie-fig2} visualizes the seven sets of quadrupolar tidal components listed in Table \ref{fig:ogilvie-tbl1}, providing a comprehensive view of the different types of tidal interactions.
+Figure \ref{fig:ogilvie-fig2} visualizes the seven sets of quadrupolar tidal components listed in Table \ref{tab:ogilvie-tbl1}, providing a comprehensive view of the different types of tidal interactions.
 
 The dashed vertical line in Figure \ref{fig:ogilvie-fig2} represents orbit and spin angular momenta alignment. As an example, let's assume an asynchronous tide in a hot Jupiter, which plays a role in energy dissipation early in a hot Jupiter's evolution, indicated by the yellow line labeled by $2, 2, 2$. When the tide reaches the synchronous state at $\frac{\Omega_o}{\Omega_s} = 1$, then $\frac{\hat{\omega}}{\Omega_s} = 0$, meaning the tidal bluge stops osciallating within the planet. This describes the mechanism of tidal locking, when the tidal bulge of the planet permanently faces the star once the spin and orbital frequencies align. Once in a tidally locked state, this mode no longer plays a role in energy dissipation in the planet (although other modes, especially those raised in the star, will). As previously mentioned, most hot Jupiters follow this track and once they enter the UHJ region, are assumed to be tidally locked.
 
@@ -380,95 +365,80 @@ In extreme mass ratio systems, the smaller body contributes very little spin ang
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\linewidth]{figs/ogilvie_fig10.png}
-    \caption{The tidal evolution of a planet-star system (assuming a circularized orbit with $e=0$). The vertical axis shows the stellar spin angular velocity (in units of the critical angular velocity, $\Omega_c$, which is associated with the critical angular momentum, $L_c$). The horizontal axis shows the planetary orbital angular velocity (also in units of critical angular velocity $\Omega_c$). The solid lines are contours of the total angular momentum of the system $L$, with arrows pointing in the direction of evolution such that energy is dissipated. The dashed line represents when the stellar spin and planetary orbit are synchronized. Black points are moments of tidal equilibrium, when $L \geq L_c$.}
+    \caption{Figure 10 from \citet{ogilvie2014tidal} illustrates the tidal evolution of a planet-star system, assuming a circularized orbit with $e=0$. The vertical axis represents the stellar spin angular velocity, measured in units of the critical angular velocity, $\Omega_c$, which corresponds to the critical angular momentum, $L_c$. The horizontal axis shows the planetary orbital angular velocity, also in units of the critical angular velocity $\Omega_c$. The solid lines are contours of the total angular momentum of the system ($L$), with arrows indicating the direction of evolution, where energy is dissipated. The dashed line marks the point at which the stellar spin and planetary orbit are synchronized. Black points represent moments of tidal equilibrium, where $L \geq L_c$.}
     \label{fig:ogilvie-fig10}
 \end{figure}
 
-Figure \ref{fig:ogilvie-fig10} shows different trajectories of a planet tidally interacting with its host star, based on the total angular momentum of the system in terms of the critical angular momentum ($\frac{L}{L_c}$), assuming the orbit is circularized such as in a UHJ system. 
+Figure \ref{fig:ogilvie-fig10} shows different trajectories of a planet tidally interacting with its host star, based on the total angular momentum of the system, expressed in terms of the critical angular momentum ($\frac{L}{L_c}$), assuming the orbit is circularized, as seen in a UHJ system.
 
-If the system's angular momentum $L$ is greater than or equal to the critical angular momentum, $L_c$, then the system can stay in equilibrium for a long time. Points of equilibrium are represented by the black dots in Figure \ref{fig:ogilvie-fig10}. The system tends to move towards tidal equilibrium (black dots) and synchronization (dashed line), as seen by the directional arrows on the contour lines. 
+If the system's angular momentum $L$ is greater than or equal to the critical angular momentum $L_c$, the system can remain in equilibrium for an extended period. The system attempts to evolve toward tidal equilibrium (black dots) and synchronization (dashed line), as indicated by the directional arrows on the contour lines. Above the synchronization line, the system has more spin angular momentum, and the star spins down as energy is dissipated. Below this line, the system has more orbital angular momentum, and tidal equilibrium is not achieved ($L < L_c$). In this case, angular momentum is transferred from the orbit to the stellar spin, leading to a shrinking orbital period and stellar spin-up—this process is known as tidal decay.
 
-Above the synchronization line, there is more spin angular momentum, and the star spins down as the system attempts to dissipate energy. Below this line, there is more orbital angular momentum, and tidal equilibrium is not reached ($L < L_c$). In this scenario, the system continuously transfers angular momentum from the orbit to the spin, resulting in a shrinking orbit period and stellar spin-up. This is tidal decay.
+Tidal interactions play a crucial role in shaping the orbital evolution of UHJs, with tidal dissipation being central to this process. Accurately quantifying the tidal dissipation rate, however, has proved to be difficult. One key parameter used to describe tidal dissipation is the tidal quality factor, $Q_*$, a dimensionless, non-literal parameterization of the tidal response that represents how efficiently the system dissipates tidal energy \citep{ogilvie2014tidal}. While $Q_*$ is commonly used in theoretical settings, it is difficult to measure directly. Instead, a more frequently employed metric is the modified tidal quality factor, $Q_*' = \frac{Q_*}{k_2}$ \citep{patel2022constraining}, where $k_2$ is the Love number that quantifies how a body deforms in response to tidal forces. The modified tidal quality factor accounts for this deformation, making it easier to measure from observational data. A larger value of $Q'_*$ indicates weaker tidal dissipation, while a smaller value suggests stronger dissipation.
 
-<some transition into talking about energy dissipation and tidal quality factor>
+The value of $Q'_*$ depends on the tidal frequency and the quadrupolar components of the spherical harmonics ($l$ and $m$), meaning that the value of $Q'_*$ can vary with the internal structure of the body \citep{ogilvie2014tidal}. For example, in the case of binary star recircularization, $Q'_*$ is typically found to be around $10^6$ \citep{ogilvie2007tidal}. In contrast, for UHJs, this value can vary significantly, with WASP-12 b having $Q^{'}_{*} = 1.8 \times 10^5$ \citep{yee2019orbit}.
 
-% Q* explanation 
-
-The tidal quality factor $Q_*$ is a dimensionless, non-literal parameterization of the tidal response that represents how efficiently the system dissipates tidal energy \citep{ogilvie2014tidal}. While $Q_*$ is commonly used in theoretical settings, it is hard to directly measure. Instead, a more commonly used metric is the modified tidal quality factor $Q_*' = \frac{Q_*}{k_2}$ \citep{patel2022constraining}, where $Q_*$ is the tidal quality factor and $k_2$ is the Love number, which measures how a body deforms due to a tidal response. The modified tidal quality factor accounts for the deformation of a body, making it easier to measure from observations of tidal effects. A larger value of $Q'_*$ means weaker dissipation, and a smaller value of $Q'_*$ means stronger dissipation.
-
-The value of $Q'_*$ depends on the tidal frequency and the different quadrupolar components of the spherical harmonics $l$ and $m$, meaning the value of $Q'_*$ differs with internal structure of the body \citep{ogilvie2014tidal}. For example, when looking at binary star recircularization, we find $Q^{'}_{*} \approx 10^6$ \citep{ogilvie2007tidal}. However, in UHJ systems, this value can vary greatly, with WASP-12 having $Q^{'}_{*} = 1.8 \times 10^5$ \citep{yee2019orbit}.
-
-
-\begin{table}[]
+\begin{table}[htbp]
     \centering
-    \begin{tabular}{c|c}
-         &  \\
-         & 
-    \end{tabular}
-    \caption{Caption}
-    \label{tab:my_label}
+    \includegraphics[width=0.85\linewidth]{figs/adams_tbl8.png}
+    \caption{Adapted from Table 8 of \citet{adams2024doomed}, the observed change in orbital period over time ($\dot{P}$) and the calculated change in orbital period over time (calc $\dot{P}$) assuming a modified tidal factor like WASP-12 b's ($Q'_* = 1.8 \times 10^5$ \citep{yee2019orbit}) for four hot Jupiter exoplanets.}
+    \label{tab:adams-tbl8}
 \end{table}
 
-Many statistical models have previously assumed a constant value of $Q^{'}_{*}$ (see Section \ref{sec:models} for an in-depth review of these models and assumptions). However, this may decrease model accuracy significantly, as the value of $Q^{'}_{*}$ depends intricately on stellar age, mass, and internal structure. For example, in Table \ref{}, \citet{adams2024doomed} show the observed change in orbital period and the theoretically calculated change in orbital period if the value of $Q'_*$ is assumed to be equal to WASP-12 b. In the four systems shown, we see drastic differences, showing that it is not feasible to predict a constant value for $Q'_*$. 
+Many statistical models have traditionally assumed a constant value for the modified tidal quality factor (see Section \ref{sec:models} for an in-depth review of these models and assumptions). However, such an assumption can significantly reduce model accuracy, as $Q^{'}_{*}$ depends intricately on stellar age, mass, and internal structure.
 
-However, one big issue with this is that it is fairly difficult to measure the value of $Q'_*$ without also making other assumptions in the observations. One way to mitigate this issue is to attempt to model the internal structure and interactions within host stars and predict the value of $Q'_*$ in this way. \citet{weinberg2023orbital} created non-linear models to develop an interpolable grid of $Q'_*$ values based on stellar parameters such as mass and age. Using this grid and system parameters, \citet{adams2024doomed} found theoretical values for a handful of extrasolar systems and compared them to $Q'_*$ values based on observations. These results are plotted in Figure \ref{fig:adams-fig11}.
-
-For example, in Figure \ref{fig:adams-fig11}, \citet{adams2024doomed} plot the values of $log_{10}Q^{'}_{*}$ depending on actual observed parameters (seen by the blue circles) and theorized models created by \citet{weinberg2023orbital} (seen by the purple plus signs).
-
-The approximation of $Q'_*$ from \citet{goldreich1966q}:
+The useful approximation for $Q'_*$ was introduced by \citet{goldreich1966q}:
 
 \begin{equation}
     Q'_* = - \left( \frac{27 \pi}{2} \right ) \left( \frac{dP}{dt} \right )^{-1} \left( \frac{M_p}{M_s} \right ) \left( \frac{a}{R_*} \right )^{-5}
-\end{equation}
+\end{equation}\label{eq:q*}
 
-shows that $Q'_*$ is inversely proportional to the rate of orbital period change \citep{adams2024doomed}. Using this approximation, \citet{adams2024doomed} calculated the value of $Q'_*$ based on the observed orbital period rate of change, and the theoretical value of $Q'_*$ based on the 
-
-
-
-
-
-
-However, if we assume this rate for UHJ systems, we get unrealisticly short orbital decay timescales. As seen in JACKSON PAPER, ADAMS PAPER (maybe use adams table 8), if we assume a constant value of $Q^{'}_{*}$, we get the following theoretical dP/dE, which differs from the observed dP/dE. This shows that we cannot assume this value, and that it is instead dependent on things such as stellar structure blah blah. 
-
-The galactic engulfment rate scales with the tidal dissipation rate. So, if we can constrain the tidal dissipation rate, then we can constrain the galactic engulfment rate and have a rough estimate of how many merger events occur in our galaxy each year. BUT WHAT IF THE TIDAL DISSIPATION RATE IS NOT THE SAME FOR EACH SYSTEM??? 
+This equation highlights the inverse relationship between $Q'_*$ and the rate of orbital period change, $\frac{dP}{dt}$ or $\dot{P}$. Using this approximation, \citet{adams2024doomed} calculated the orbital period decay rate for a collection of hot Jupiters under the assumption that their tidal dissipation rate matches that of WASP-12 b. Table \ref{tab:adams-tbl8} compares these calculated values with observed $\dot{P}$ values for four of these systems. The discrepancies between the systems emphasize that a single, constant $Q'_*$ value is not sufficient to accurately model tidal dissipation across different exoplanetary systems.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.85\linewidth]{figs/adams_fig11.jpg}
-    \caption{Values of $Q^{'}_*$ based on observational and theoretical calculations. Red triangles are the $3\sigma$ lower limit (HOW WERE THESE CALCULATED). Systems with negative values for $\dot{P}$ (indicating decaying orbits) but insignificant detections ($<3\sigma$ detection WHAT DOES THIS MEAN??) have $Q^{'}_*$ values plotted as open blue circles. The two systems with negative, significant values of $\dot{P}$, WASP-12 b and TrES-1 b, have $Q^{'}_*$ values plotted as solid blue circles. The theoretical estimates of $Q^{'}_*$, calculated using system parameters and the grid from \citet{weinberg2023orbital}, are plotted as purple plus signs.}
+    \caption{Figure 11 from \citet{adams2024doomed} presents both observational and theoretical values of the modified tidal quality factor, $Q^{'}_*$, for various systems. Red triangles represent the $3\sigma$ lower limits of $Q^{'}_*$, calculated using equation \ref{eq:q*}. Systems with negative orbital periods ($\dot{P}$), indicating orbital decay, but with insignificant detections (i.e., $<3\sigma$), are marked with open blue circles. In contrast, the two systems exhibiting significant negative values of $\dot{P}$, WASP-12 b and TrES-1 b, are represented by solid blue circles. The theoretical estimates of $Q^{'}_*$, derived from the grids provided by \citet{weinberg2023orbital}, are shown as purple plus signs. For more details on the system parameter values, refer to \citet{adams2024doomed}.}
     \label{fig:adams-fig11}
 \end{figure}
+
+One major challenge in studying tidal dissipation is that measuring $Q'_*$ directly requires additional observational assumptions. To mitigate this, an alternative approach is to model the internal structure and interactions within host stars to predict $Q'_*$ theoretically. \citet{weinberg2023orbital} developed non-linear models to construct an interpolable grid of $Q'_*$ values based on stellar parameters such as mass and age. Using this grid, \citet{adams2024doomed} estimated theoretical $Q'_*$ values for several exoplanetary systems and compared them to observationally derived values. These results are presented in Figure \ref{fig:adams-fig11}.
+
+While the observed values of $Q'_*$ (blue circles) and the theoretical predictions (purple plus signs) appear to differ significantly, it is important to consider two key factors. First, the grid used by \citet{adams2024doomed} was relatively coarse, meaning finer parameter steps could yield more accurate approximations. Second, stellar parameters, particularly stellar age, are notoriously difficult to constrain. For instance, during long evolutionary phases such as the main sequence or giant phase—lasting millions to billions of years—observable changes in a star are minimal, making age estimates highly uncertain.
+
+Beyond informing orbital decay rates, knowledge of $Q'_*$ has broader implications. In particular, it plays a crucial role in estimating the galactic engulfment rate—the number of planets engulfed by their host stars per year across the Milky Way. Since this rate scales with the tidal dissipation rate \citep{jackson2023metrics}, constraining $Q'_*$ allows for a rough estimate of how frequently such merger events occur. However, as research progresses, it is becoming increasingly clear that $Q'_*$ is not a universal constant, meaning the assumption of a single, fixed value may not hold.
+
+Gravitational interactions between a hot Jupiter and its host star influence the planet’s orbit over time. However, the mechanisms governing these interactions—such as angular momentum transfer, energy dissipation, and internal stellar and planetary processes—are still not fully understood, making this an active area of research. By improving our understanding of these internal mechanisms, we can refine theoretical models of orbital decay, ultimately aiding in the identification of decaying systems and potential merger events.
 
 \clearpage
 
 
-
-
 \subsection{Observational Evidence and Challenges}\label{sec:obs}
 
-When a planet transits its star, there is a photometric signal and a spectroscopic signal. While both can confirm the transit of an exoplanet, each method results in unique datasets and planetary parameters. Below is an overview of both techniques, the parameters we can obtain from observations, and any caveats to these methods.
+When a planet transits its star, it can be observed using both photometric and spectroscopic techniques, each producing distinct datasets and revealing different planetary parameters. While both methods confirm the presence of an exoplanet, they provide complementary insights into its physical and atmospheric properties. Below is an overview of these observational techniques, the parameters they can help us determine, and the challenges associated with data collection and long-term maintenance.
 
 \subsubsection{Photometric Techniques}\label{sec:obs-photo}
-Explain how precise measurements of transit timings can indicate changes in orbital periods, signaling potential tidal decay.
 
-- Flux collection: 
-    - light curves (orbital periods)
-    - planet needs to transit
+Photometric techniques involve measuring the intensity of a star’s light (flux) over time. These observations are commonly made with telescopes across various wavelengths, primarily in the optical and near-infrared, which we focus on in this section.
 
-There are multiple ways to observe the shrinking orbital periods indicative of tidally decaying UHJs. The unique size and proximity of UHJs makes a particular method of observation easy—transit observations. A transit occurs when an exoplanet passes in front of its star from our point of view, casting a shadow and blocking some light coming from the star. If we collect the amount of light (also called flux) coming from the star over time into a graph called a light curve, we will see a characteristic dip in the amount of light coming from the star as the planet passes over and casts its shadow, as seen in Figure \ref{fig:winnfig1} \citep{winn2010transits}. 
+As reviewed in Section \ref{sec:intro}, a transit occurs when an exoplanet passes in front of its host star from our vantage point, blocking a portion of the star’s light. By collecting stellar flux measurements over time and plotting them as a light curve, we observe a characteristic dip in brightness as the planet transits. See Figure \ref{fig:winn-fig8} for an example of a light curve.
 
-% There are a few reasons why UHJs are ideal for these types of observations. First, these gas giants have large radii, which tend to be even more inflated as they move closer to their stars due to internal heating caused by tidal interactions with their host stars \citep{ogilvie2014tidal}. Their large radii cast a larger shadow on their host star during transits, which appear as more distinct dips in their light curves, making the transit both easier to detect and less erroneous. UHJs also have short orbital periods, meaning they orbit extremely quickly around their host stars and therefore have a large amount of transits to observe in a small time frame. For example, if a star is available to observe during a period of one month and the exoplanet's orbital period is about 3 days, you could potentially observe 10 transits in just one month. 
+Ultra-hot Jupiters (UHJs) are particularly well-suited for photometric observations. Their large radii—often further inflated by intense stellar heating and tidal interactions \citep{ogilvie2014tidal}—cause deeper transit dips in light curves, making them easier to detect with lower uncertainty. Additionally, their short orbital periods result in frequent transits, allowing multiple observations within a short timeframe. For instance, an exoplanet with a three-day orbit could produce up to ten transits in a single month of observation.
 
-UHJ's large radii and short orbital periods also provide the opportunity to observe an occultation, which is when the planet moves around its star revealing its dayside, reflecting light towards us and increasing the overall amount of light coming from the system, and then moves behind its star, blocking out the light reflected from the planet and resulting in another characteristic, albeit smaller, dip in the light curve. We are lucky to be able to observe occultations for a handful of these systems, as most exoplanets are too small to be able to get any signal from their occultations in light curves. Occultations can be useful to track the overall motion and possible shape of the orbit. 
+The combination of large radii and rapid orbits also enables the detection of secondary eclipses, or occultations. When the planet orbits behind its star, the system’s total brightness momentarily decreases as the planet’s dayside (which also reflects light) is blocked. Though the occultation signal is weaker than the transit signal, it provides valuable constraints on the planet’s orbit. While most exoplanets are too small to produce a detectable occultation, UHJs offer rare opportunities to observe these events in light curves.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.6\linewidth]{figs/winn_fig2.png}
-    \caption{Figure 2 from \citet{winn2010transits} illustrates the four key contact points during an exoplanet transit. First contact ($t_I$) marks the start of the transit when the planetary and stellar disks first touch. Second contact ($t_{II}$) occurs when the planet is fully within the stellar disk, defining the ingress duration ($\tau_\text{ing} = t_{II} - t_I$). Third contact ($t_{III}$) happens when the planet has moved across the stellar disk and begins to exit, and fourth contact ($t_{IV}$) marks the end when the disks last touch, defining the egress duration ($\tau_\text{egr} = t_{IV} - t_{III}$). The total duration ($T_\text{tot} = t_{IV} - t_{I}$) spans the entire transit, while the full transit duration ($T_\text{full} = t_{III} - t_{II}$) covers the time the planet is fully within the stellar disk.}
+    \caption{Figure 2 from \citet{winn2010transits} illustrates the four key contact points during an exoplanet transit. First contact ($t_I$) marks the beginning of the transit when the planetary and stellar disks first touch. Second contact ($t_{II}$) occurs when the planet is fully within the stellar disk, defining the ingress duration as $\tau_\text{ing} = t_{II} - t_I$. As the planet moves across the stellar disk, it reaches third contact ($t_{III}$), the moment it begins to exit. Fourth contact ($t_{IV}$) marks the end of the transit when the disks last touch, defining the egress duration as $\tau_\text{egr} = t_{IV} - t_{III}$. The total transit duration is given by $T_\text{tot} = t_{IV} - t_{I}$, spanning the entire event. The full transit duration, $T_\text{full} = t_{III} - t_{II}$, represents the time the planet is completely within the stellar disk.}
     \label{fig:winnfig2}
 \end{figure}
 
-UHJs have easily collectible light curves, but how do we process the data from these light curves? Let's call the time that the planet is in the very middle of its transit the midtransit time, which is calculated as half of the time it takes from contact two to contact three, $\frac{T_{\text{tot}}}{2}$, shown in Figure \ref{fig:winnfig2}. The time it takes from one consecutive midtransit time to the next is the amount of time it takes for the planet to complete one orbit around its star, which we call the orbital period. As we collect light curves, and therefore, midtransit times, of UHJ transits, we can observe the behavior of the orbital period over time. If the orbital period is consistent, then we may conclude that the UHJ's orbit is stable and unchanging. However, if we observe a change or even a decrease in the orbital period, we may conclude that the orbit is decaying, possibly due to tidal interactions with its host star, that will lead to its eventual inspiral. 
+UHJs produce well-defined light curves, but how do we extract meaningful information from them? One key measurement is the midtransit time—the moment when the planet is at the center of its transit. This is calculated as half the total transit duration, or 
+$\frac{T_{\text{tot}}}{2}$, as illustrated in Figure \ref{fig:winnfig2}.
+
+The interval between consecutive midtransit times corresponds to the planet’s orbital period, the time it takes to complete one full orbit around its star. By continuously monitoring UHJs and measuring their midtransit times, we can track how their orbital periods evolve over time.
+
+If the orbital period remains consistent, we infer that the UHJ's orbit is stable. However, a gradual change—or more critically, a decrease—in the orbital period suggests that the planet’s orbit is shrinking. This decay is likely driven by tidal interactions with its host star, which, if sustained, will eventually lead to the planet’s inspiral and ultimate merger with the star \citep{ogilvie2014tidal}.
 
 \begin{figure}[htbp]
     \centering
